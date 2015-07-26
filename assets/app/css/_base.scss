@@ -1,0 +1,95 @@
+    
+    // default element styles.
+    
+    * {
+
+        box-sizing: border-box;
+        
+    }
+
+    html, body {
+        
+        font-family: "Open Sans", "Helvetica", "Arial";
+        font-size: 1em;
+        
+        color: $color;
+        background: $bg;
+
+        min-height: 100%;
+
+        @media screen and ( max-width: 1000px ) {
+            
+            font-size: 0.9em;
+
+        }
+
+    }
+
+    body {
+
+        padding: 2em;
+
+        @media screen and ( max-width: 800px ) {
+            
+            padding: 2em 0;
+
+        }
+
+    }
+
+    main {
+
+        
+
+    }
+
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.7em; }
+    h4 { font-size: 1.4em; }
+    h5 { font-size: 1.2em; }
+
+    a {
+
+        color: $link;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        
+        &:visited {
+            
+            color: $linkVisited;
+
+        }
+
+        &:hover {
+
+            color: $linkHover;
+
+        }
+
+    }
+
+    code, pre {
+
+        font-family: $code;
+
+    }
+
+
+
+
+    // Helper Classes.
+
+    .hidden {
+        
+        position: absolute;
+        width: 1px; height: 1px;
+        overflow: hidden;
+        opacity: 0;
+
+    }
+
+    .heading {
+
+        font-family: $title;
+
+    }

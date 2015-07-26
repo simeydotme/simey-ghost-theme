@@ -1,0 +1,43 @@
+    
+    .header {
+
+        text-align: center;
+
+
+        &__title,
+        &__description {
+
+        }
+
+        &__title {
+
+            padding: 2em 0 5em;
+
+        }
+
+        &__simey {
+
+            font-size: 3.5em;
+            letter-spacing: -2px;
+            vertical-align: middle;
+
+            line-height: 1;
+            margin-bottom: 1.5em;
+
+            a {
+
+                color: $headercolor;
+
+            }
+
+        }
+
+        &__dotme {
+                
+            font-weight: normal;
+            color: lighten( $bg, 55% );
+
+        }
+
+    }
+    
