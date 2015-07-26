@@ -3,10 +3,14 @@
     $bgStart: #413763;
     $color: #eee;
 
-    $headercolor: #62efab;
+    $simeycolor: #62efab;
     $link: #66c9e5;
     $linkHover: #d797a2;
     $linkVisited: #cdadfd;
+
+    $posttitle: #53D9FF;
+    $posthover: $simeycolor;
+    $postvisited: $posttitle;
 
     $title: "Asap", "Helvetica", "Arial";
     $code: "Inconsolata", "Menlo", "Consolas", "Courier";

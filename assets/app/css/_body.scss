@@ -1,18 +1,17 @@
-
-    .content {
-
-        padding: 2em;
-        border-radius: 2px;
-
-        max-width: 1100px;
-        margin: auto;
-
-        @media screen and ( max-width: 800px ) {
-            
-            border-radius: 0;
-
-        }
+    
+    .site-wrapper {
+        
+        padding: 3em 0;
+        overflow: hidden;
+        background: lighten( $bg, 2.5% );
+        border-radius: 3px;
 
     }
 
-    
+    .content {
+
+        max-width: 45em;
+        padding: 0 1em;
+        margin: auto;
+
+    }
