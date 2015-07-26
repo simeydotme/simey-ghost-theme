@@ -80,7 +80,7 @@ gulp.task("sass", ["clean:sass"], function() {
         .pipe( sass().on("error", sass.logError ) )
         .pipe( autoprefixer("last 5 versions") )
         .pipe( gulp.dest("./assets/dist/css") )
-        .pipe( livereload() );
+        .pipe( livereload( 1337 ) );
 
 });
 
