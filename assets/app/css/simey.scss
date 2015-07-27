@@ -12,8 +12,10 @@
     $posthover: $simeycolor;
     $postvisited: $posttitle;
 
-    $title: "Asap", "Helvetica", "Arial";
-    $code: "Inconsolata", "Menlo", "Consolas", "Courier";
+    $fHeading: Avenir, Helvetica, "Segoe UI", Arial, sans-serif;
+    $fTitle: Asap, Helvetica, "Segoe UI", Arial, sans-serif;
+    $fBody: Helvetica, "Segoe UI", Arial, sans-serif;
+    $fCode: Menlo, Monaco, Consolas, monospace;
 
     @import "../../../bower_components/normalize.css/normalize";
 
