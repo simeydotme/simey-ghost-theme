@@ -1,7 +1,7 @@
 
-    $bg: #312b38;
+    $bg: #241e2e;
     $bgStart: #413763;
-    $color: #eee;
+    $color: #d1dedb;
 
     $simeycolor: #62efab;
     $link: #66c9e5;
@@ -12,9 +12,9 @@
     $posthover: $simeycolor;
     $postvisited: $posttitle;
 
-    $fHeading: Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
-    $fTitle: Asap, "Segoe UI", Helvetica, Arial, sans-serif;
-    $fBody: "Segoe UI", Helvetica, Arial, sans-serif;
+    $fHeading: Avenir, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    $fTitle: Asap, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    $fBody: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     $fCode: Menlo, Monaco, Consolas, monospace;
 
     @import "../../../bower_components/normalize.css/normalize";
@@ -24,6 +24,6 @@
 
     @import "header";
     @import "body";
-    @import "social";
+    @import "footer";
     
     @import "posts";

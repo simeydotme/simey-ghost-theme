@@ -13,9 +13,15 @@ var gulp = require("gulp"),
 
 
 
-gulp.task("default", ["assets", "svg", "js", "img", "sass"], function() {
+gulp.task("default", ["init", "watch"], function() {
 
-    console.log("done");
+    console.log("  💫  👌 ");
+
+});
+
+gulp.task("init", ["assets", "js", "img", "sass"], function() {
+
+    console.log(" 🌟 getting this show on the road... ")
 
 });
 
@@ -39,17 +45,17 @@ gulp.task("assets", function() {
 
 });
 
-gulp.task("svg", function() {
+// gulp.task("svg", function() {
 
-    var i = /<i data-icon="(.*)"><\/i>/g,
-        o = "<svg class=\"$1\" role=\"presentation\"><use xlink:href=\"/assets/dist/img/svgdefs.svg#$1\"></use></svg>";
+//     var i = /<i data-icon="(.*)"><\/i>/g,
+//         o = "<svg class=\"$1\" role=\"presentation\"><use xlink:href=\"/assets/dist/img/svgdefs.svg#$1\"></use></svg>";
 
-    gulp
-        .src( "./**/*.hbs" )
-        .pipe( replace( i, o ) )
-        .pipe( gulp.dest("./") );
+//     gulp
+//         .src( "./**/*.hbs" )
+//         .pipe( replace( i, o ) )
+//         .pipe( gulp.dest("./") );
 
-});
+// });
 
 gulp.task("js", ["clean:js"], function() {
 
@@ -142,9 +148,10 @@ gulp.task("clean:img", function() {
 
 
 
-gulp.task("watch:sass", function() {
+gulp.task("watch", function() {
 
     livereload.listen();
     gulp.watch("./assets/app/css/**/*.scss", [ "sass" ]);
+    gulp.watch("./assets/app/js/**/*.js", [ "js" ]);
 
 });

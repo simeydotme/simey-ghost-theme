@@ -20,14 +20,20 @@
 </div>
 
 {{! The main content area on the homepage }}
-<main id="content" class="content" role="main">
+<main id="content" class="content clear" role="main">
 
-    <section class="posts-list">
+    <section class="divided-section lg-two-thirds lg-float-l">
         
         <h2 class="hidden">Posts</h2>
 
         {{! The tag below includes the post loop - partials/loop.hbs }}
         {{> "loop"}}
+
+    </section>
+
+    <section class="divided-section lg-a-third lg-float-l">
+        
+        <h2 class="heading smaller lg-no-margin-t">Things</h2>
 
     </section>
 
