@@ -6,7 +6,6 @@
 
 {{#if @blog.cover}} {{/if}}
 
-{{#if @blog.navigation}} {{/if}}
 
 {{#if @blog.logo}}
     {{@blog.url}}
@@ -22,7 +21,7 @@
 {{! The main content area on the homepage }}
 <main id="content" class="content clear" role="main">
 
-    <section class="divided-section lg-two-thirds lg-float-l">
+    <section class="divided-section lg-sixty lg-float-l">
         
         <h2 class="hidden">Posts</h2>
 
@@ -31,9 +30,11 @@
 
     </section>
 
-    <section class="divided-section lg-a-third lg-float-l">
+    <section class="divided-section lg-forty lg-float-l">
         
-        <h2 class="heading smaller lg-no-margin-t">Things</h2>
+        {{#if @blog.navigation}} 
+        {{navigation}}
+        {{/if}}
 
     </section>
 

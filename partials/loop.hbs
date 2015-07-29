@@ -2,25 +2,41 @@
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
 
-<article class="blog-post {{post_class}}">
+<article class="blog-post // {{post_class}}">
     
     <header class="blog-post__header">
 
-        <h3 class="blog-post__title heading">
-            <a class="blog-post__title-link" href="{{url}}">{{{title}}}</a>
+        <h3 class="blog-post__title // heading / small / txt-thin / no-margin">
+
+            <a class="blog-post__title-link" href="{{url}}" tabindex="2">
+
+                {{{title}}}
+
+            </a>
+
         </h3>
 
-        <time class="blog-post__date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-        <span class="blog-post__tags hidden">{{tags prefix=" ≈ "}}</span>
+        <time 
+            class="blog-post__date // txt-code / txt-light / cursor-normal" 
+            datetime="{{ date format='YYYY-MM-DD' }}"
+            title="~ {{ date format='h:mm a' }}">
+
+            {{ date format="Do MMMM YYYY" }}
+
+        </time>
 
     </header>
     
-    <div class="hidden">
-        {{excerpt words="26"}}
+    <div class="blog-post__content // hidden">
+
+        {{excerpt words="18"}}
+
     </div>
 
-    <footer class="hidden">
-        {{author}}
+    <footer class="blog-post__footer // hidden">
+        {{#author}}
+        Written by <a href="{{url}}" tabindex="-1">{{name}}</a>, {{tags prefix="tagged: "}}
+        {{/author}}
     </footer>
 
 </article>

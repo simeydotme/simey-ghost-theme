@@ -11,11 +11,11 @@
     $posttitle: #53D9FF;
     $posthover: $simeycolor;
     $postvisited: $posttitle;
-
-    $fHeading: Avenir, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    $fTitle: Asap, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    $fBody: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    $fCode: Menlo, Monaco, Consolas, monospace;
+    
+    $fSans:     "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    $fHeading:  Avenir, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    $fSimey:    Asap, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    $fCode:     Menlo, Monaco, Consolas, monospace;
 
     @import "../../../bower_components/normalize.css/normalize";
 
