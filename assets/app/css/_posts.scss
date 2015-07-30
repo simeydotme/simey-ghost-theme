@@ -5,9 +5,13 @@
         position: relative;
         padding: 0;
         margin: 0 0 3em;
+
+
+
         
         &__title {
 
+            font-size: 1.8em;
             color: $posttitle;
 
             &-link {
@@ -39,7 +43,7 @@
 
         }
 
-        &:hover .blog-post__date{
+        &:hover .blog-post__date {
 
             color: rgba( lighten( $bg, 60% ) , 1 );
 
@@ -47,3 +51,62 @@
 
     }
 
+
+    
+
+
+    $firstBatch: 6;
+    $secondBatch: 11;
+
+    .blog-post {
+
+        &:nth-of-type( n + #{$firstBatch} ) {
+
+            margin: 0 0 1.5em;
+
+            .blog-post__title {
+            
+                font-size: 1.4em;
+                line-height: 1.2;
+
+            }
+
+        }
+
+        &:nth-of-type( #{$firstBatch} ) {
+
+            margin-top: 6em;
+
+        }
+
+
+
+
+
+
+        &:nth-of-type( n + #{$secondBatch} ) {
+            
+            margin: 0 0 0.8em;
+
+            .blog-post__title {
+                
+                font-size: 1.2em;
+
+            }
+
+            .blog-post__date {
+
+                @extend .hidden;
+
+            }
+
+        }
+
+        &:nth-of-type( #{$secondBatch} ) {
+
+            margin-top: 5em;
+
+        }
+
+
+    }

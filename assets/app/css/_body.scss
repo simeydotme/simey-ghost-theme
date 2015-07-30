@@ -1,12 +1,8 @@
     
     .body {
 
-        max-width: 45em;
-
         padding: 3em 1em;
-        margin: auto;
         line-height: 1.6;
-
         overflow: hidden;
 
     }
@@ -21,24 +17,24 @@
             &:nth-child(odd) {
 
                 padding-left: 0;
-
-                &:after {
-
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    height: 100%;
-                    width: 1px;
-                    background: rgba( lighten( $bg, 80% ) , 0.3 );
-
-                }
                 
             }
             
             &:nth-child(even) {
 
                 padding-right: 0;
+
+                &:after {
+
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 1px;
+                    background: rgba( lighten( $bg, 80% ) , 0.3 );
+
+                }
                 
             }
 

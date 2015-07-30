@@ -85,6 +85,7 @@
 
         font-family: $fHeading;
         font-size: 2em;
+        line-height: 1.4;
         font-weight: 500;
 
         &.biggest { font-size: 3em; }
@@ -107,6 +108,8 @@
         height: 1px; 
         overflow: hidden; 
         opacity: 0; }
+
+    .wrap               { max-width: 45em; margin: auto; }
 
     .float-l            { float: left; }
     .float-r            { float: right; }
