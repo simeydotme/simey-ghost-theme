@@ -12,6 +12,10 @@
 
                 {{{title}}}
 
+                {{#if featured}}
+                    <em class="hidden">this is a featured Article.</em>
+                {{/if}}
+
             </a>
 
         </h3>
@@ -24,6 +28,20 @@
             {{ date format="Do MMMM YYYY" }}
 
         </time>
+
+        {{#if featured}}
+            <div class="blog-post__stars">
+
+                <span class="blog-post__star" title="Featured Post!" role="presentation">
+                    {{> svgicon iconname="star-outline"}}
+                </span>
+
+                <span class="blog-post__star blog-post__star--filled" title="Featured Post!" role="presentation">
+                    {{> svgicon iconname="star"}}
+                </span>
+
+            </div>
+        {{/if}}
 
     </header>
     
