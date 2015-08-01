@@ -3,7 +3,7 @@
 
         text-align: center;
         position: relative;
-        padding: 8em 0 7em ;
+        padding: 7.5em 0 7em ;
         margin: 0 0 1.5em;
 
         background: $bg;
@@ -20,11 +20,17 @@
             vertical-align: middle;
 
             line-height: 1;
-            margin: 0 0 0.8em;
+            margin: 0 0 0.8em -0.3em;
 
             a {
 
                 color: $simeycolor;
+
+            }
+
+            @media screen and ( max-width: 40em ) {
+
+                font-size: 12vw;
 
             }
 
