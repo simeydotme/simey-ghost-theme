@@ -3,13 +3,13 @@
 {{#foreach posts}}
 {{#has tag="unlooped"}}
 {{else}}
-<article class="blog-post // {{ post_class }}">
+<article class="loop-post // {{ post_class }}">
 
-    <header class="blog-post__header">
+    <header class="loop-post__header">
 
-        <h3 class="blog-post__title // heading / txt-thin / no-margin">
+        <h3 class="loop-post__title // heading / txt-thin / no-margin">
 
-            <a class="blog-post__title-link" href="{{url}}" tabindex="2" {{#if featured}} title="Featured Post!" {{/if}}>
+            <a class="loop-post__title-link" href="{{url}}" tabindex="2" {{#if featured}} title="Featured Post!" {{/if}}>
 
                 {{{title}}}
 
@@ -22,7 +22,7 @@
         </h3>
 
         <time 
-            class="blog-post__date // txt-code / txt-light / cursor-normal" 
+            class="loop-post__date // txt-code / txt-light / cursor-normal" 
             datetime="{{ date format='YYYY-MM-DD' }}"
             title="~ {{ date format='h:mm a' }}">
 
@@ -31,13 +31,13 @@
         </time>
 
         {{#if featured}}
-            <div class="blog-post__stars">
+            <div class="loop-post__stars">
 
-                <span class="blog-post__star" title="Featured Post!" role="presentation">
+                <span class="loop-post__star" title="Featured Post!" role="presentation">
                     {{> svgicon iconname="star-outline"}}
                 </span>
 
-                <span class="blog-post__star blog-post__star--filled" title="Featured Post!" role="presentation">
+                <span class="loop-post__star loop-post__star--filled" title="Featured Post!" role="presentation">
                     {{> svgicon iconname="star"}}
                 </span>
 
@@ -46,13 +46,13 @@
 
     </header>
     
-    <div class="blog-post__content // hidden">
+    <div class="loop-post__content // hidden">
 
         {{excerpt words="18"}}
 
     </div>
 
-    <footer class="blog-post__footer // hidden">
+    <footer class="loop-post__footer // hidden">
         {{#author}}
         Written by <a href="{{url}}" tabindex="-1">{{name}}</a>, {{tags prefix="tagged: "}}
         {{/author}}

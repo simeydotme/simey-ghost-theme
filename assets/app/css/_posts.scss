@@ -1,6 +1,6 @@
 
 
-    .blog-post {
+    .loop-post {
             
         position: relative;
         padding: 0;
@@ -89,7 +89,7 @@
 
         &:hover {
 
-            .blog-post__date {
+            .loop-post__date {
 
                 color: rgba( lighten( $bg, 60% ) , 1 );
 
@@ -104,8 +104,8 @@
 
     
 
-    .blog-post__title:hover ~ .blog-post__stars .blog-post__star,
-    .blog-post__stars:hover .blog-post__star {
+    .loop-post__title:hover ~ .loop-post__stars .loop-post__star,
+    .loop-post__stars:hover .loop-post__star {
 
         opacity: 0;
 
@@ -125,20 +125,20 @@
     $firstBatch: 4;
     $secondBatch: 11;
 
-    .blog-post {
+    .loop-post {
 
         &:nth-of-type( n + #{$firstBatch} ) {
 
             margin: 0 0 1.5em;
 
-            .blog-post__title {
+            .loop-post__title {
             
                 font-size: 1.4em;
                 line-height: 1.2;
 
             }
 
-            .blog-post__stars {
+            .loop-post__stars {
 
                 top: -0.2em;
 
@@ -161,19 +161,19 @@
             
             margin: 0 0 0.8em;
 
-            .blog-post__title {
+            .loop-post__title {
                 
                 font-size: 1.2em;
 
             }
 
-            .blog-post__date {
+            .loop-post__date {
 
                 @extend .hidden;
 
             }
 
-            .blog-post__stars {
+            .loop-post__stars {
 
                 top: -0.2em;
                 left: -1.9em;
