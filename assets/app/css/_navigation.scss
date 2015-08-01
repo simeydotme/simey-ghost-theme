@@ -2,11 +2,26 @@
     .nav {
         
         text-transform: lowercase;
+        transition: opacity 0.2s ease-in;
 
     }
 
     .nav__subscribe {
 
         margin-top: 2em;
+
+    }
+
+    .body:hover .nav {
+
+        opacity: 0.2;
+        transition: opacity 6s ease-out;
+
+        &:hover {
+
+            opacity: 1;
+            transition: opacity 0.2s ease-in;
+
+        }
 
     }
