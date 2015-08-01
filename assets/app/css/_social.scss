@@ -22,7 +22,7 @@
             &.github svg { top: 4px; }
             &.codepen svg { top:  4.5px; }
 
-            @media screen and ( max-width: 440px ) {
+            @media screen and ( max-width: 40em ) {
 
                 opacity: 0.8;
                 font-size: 1.2em;
@@ -46,10 +46,17 @@
             }
 
         }
+            
+        @media screen and ( max-width: 40em ) {
+            
+            font-size: 1.4em;
+            left: 0;
+
+        }
 
     }
 
-@media screen and ( min-width: 441px ) {
+@media screen and ( min-width: 40em ) {
 
     header:hover .social {
 
