@@ -11,6 +11,22 @@
 
         padding: 2em;
         position: relative;
+            
+        &:nth-child(even) {
+
+            &:after {
+
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 1px;
+                background: rgba( lighten( $bg, 80% ) , 0.3 );
+
+            }
+            
+        }
 
         @media screen and ( min-width: 40em ) {
 
@@ -24,17 +40,15 @@
 
                 padding-right: 0;
 
-                &:after {
+            }
 
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 1px;
-                    background: rgba( lighten( $bg, 80% ) , 0.3 );
+        }
 
-                }
+        @media screen and ( max-width: 40em ) {
+
+            &:nth-child(even) {
+
+                margin-left: 1em;
                 
             }
 

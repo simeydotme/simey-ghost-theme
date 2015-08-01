@@ -11,7 +11,7 @@
     body {
         
         color: $color;
-        background: desaturate(  lighten( $bg, 5% ), 7% );
+        background: $bgBody;
         min-height: 100%;
 
     }
@@ -114,8 +114,12 @@
     .float-l            { float: left; }
     .float-r            { float: right; }
 
+    .disp-b             { display: block; }
+    .disp-i             { display: inline; }
+    .disp-ib            { display: inline-block; }
+
     .txt-sans           { font-family: $fSans; }
-    .txt-serif          { font-family: serif; }
+    .txt-serif          { font-family: $fSerif; }
     .txt-code           { font-family: $fCode; }
 
     .txt-l              { text-align: left; }
@@ -168,6 +172,10 @@
     .lg-float-l         { float: left; }
     .lg-float-r         { float: right; }
 
+    .lg-disp-b             { display: block; }
+    .lg-disp-i             { display: inline; }
+    .lg-disp-ib            { display: inline-block; }
+
     .lg-txt-l           { text-align: left; }
     .lg-txt-r           { text-align: right; }
     .lg-txt-c           { text-align: center; }
@@ -216,6 +224,10 @@
 
     .sm-float-l         { float: left; }
     .sm-float-r         { float: right; }
+
+    .sm-disp-b             { display: block; }
+    .sm-disp-i             { display: inline; }
+    .sm-disp-ib            { display: inline-block; }
 
     .sm-txt-l           { text-align: left; }
     .sm-txt-r           { text-align: right; }
