@@ -1,14 +1,15 @@
 
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-
+{{#has tag="unlooped"}}
+{{else}}
 <article class="blog-post // {{ post_class }}">
-    
+
     <header class="blog-post__header">
 
         <h3 class="blog-post__title // heading / txt-thin / no-margin">
 
-            <a class="blog-post__title-link" href="{{url}}" tabindex="2">
+            <a class="blog-post__title-link" href="{{url}}" tabindex="2" {{#if featured}} title="Featured Post!" {{/if}}>
 
                 {{{title}}}
 
@@ -59,6 +60,8 @@
 
 </article>
 
+
+{{/has}}
 {{/foreach}}
 
 {{! Previous/next page links - displayed on every page }}
