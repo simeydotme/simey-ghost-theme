@@ -2,16 +2,20 @@
     $bg: #241e2e;
     $bgBody: desaturate( lighten( $bg, 5% ), 7% );
     $bgStart: #413763;
-    $color: #d1dedb;
+    $fg: #d1dedb;
 
     $simeycolor: #62efab;
-    $link: #66c9e5;
-    $linkHover: #d797a2;
-    $linkVisited: #cdadfd;
+    $blue: #66c9e5;
+    $coral: #d797a2;
+    $violet: #cdadfd;
+
+    $link: $blue;
+    $linkHover: $coral;
+    $linkVisited: $violet;
 
     $star: #fbff60;
 
-    $posttitle: #53D9FF;
+    $posttitle: saturate( $blue, 30% );
     $posthover: $simeycolor;
     $postvisited: $posttitle;
     
@@ -33,3 +37,4 @@
     @import "footer";
     
     @import "posts";
+    @import "post";

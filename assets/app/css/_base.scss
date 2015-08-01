@@ -10,7 +10,7 @@
     html, 
     body {
         
-        color: $color;
+        color: $fg;
         background: $bgBody;
         min-height: 100%;
 
@@ -125,6 +125,10 @@
     .txt-l              { text-align: left; }
     .txt-r              { text-align: right; }
     .txt-c              { text-align: center; }
+
+    .clr-simey          { color: $simeycolor; }
+    .clr-blue           { color: $blue; }
+    .clr-coral          { color: $coral; }
 
     .txt-thin           { font-weight: 100; }
     .txt-light          { font-weight: 300; }
