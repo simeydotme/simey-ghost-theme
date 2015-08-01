@@ -1,5 +1,6 @@
 
     $bg: #241e2e;
+    $bgBody: desaturate( lighten( $bg, 5% ), 7% );
     $bgStart: #413763;
     $color: #d1dedb;
 
@@ -15,6 +16,7 @@
     $postvisited: $posttitle;
     
     $fSans:     "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    $fSerif:    "Georgia", serif;
     $fHeading:  Avenir, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     $fSimey:    Asap, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     $fCode:     Menlo, Monaco, Consolas, monospace;
@@ -23,9 +25,11 @@
 
     @import "base";
     @import "svg";
+    @import "button";
 
     @import "header";
     @import "body";
+    @import "navigation";
     @import "footer";
     
     @import "posts";
