@@ -1,0 +1,59 @@
+
+    .header--post {
+
+        padding: 2em 0;
+
+        @media screen and ( max-width: 43em ) {
+            
+            padding: 2em 1.2em;
+
+        }
+
+        .header__title {
+
+            overflow: hidden;
+            @extend .wrap;
+
+        }
+
+        .header__simey {
+
+            float: left;
+            font-size: 2em;
+            margin: auto;
+
+            @media screen and ( max-width: 30em ) {
+                
+                float: none;
+
+            }
+
+        }
+
+        .social {
+
+            float: right;
+            font-size: 1.6em;
+            top: -0.1em;
+
+            @media screen and ( max-width: 30em ) {
+                
+                display: none;
+
+            }
+
+            &__link {
+
+                padding: 0.3em 0.5em;
+
+            }
+
+        }
+
+        &:hover .social__item {
+
+            transform: none;
+
+        }
+
+    }

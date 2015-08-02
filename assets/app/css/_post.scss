@@ -4,6 +4,31 @@
         &__header {
 
             
+            
+            margin: 5em 0;
+
+        }
+
+        &__title {
+
+        }
+
+        &__meta {
+
+        }
+
+    }
+
+
+    .blog-post__content {
+
+        font-size: 1.375em;
+        color: darken( $fg, 5% );
+
+        p:first-child {
+            
+            font-size: 1.2em;
+            font-weight: 100;
 
         }
 

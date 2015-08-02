@@ -18,8 +18,9 @@
                 {{title}}
             </h1>
 
-            <section class="blog-post__meta">
-                <time class="blog-post__date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+            <section class="blog-post__meta // txt-c / txt-code">
+                <time class="blog-post__date // disp-b" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> 
+                <span class="blog-post__tags // txt-lower">{{tags separator=", "}}</span>
             </section>
 
         </header>
