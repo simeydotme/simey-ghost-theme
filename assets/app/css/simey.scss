@@ -18,6 +18,10 @@
     $posttitle: saturate( $blue, 30% );
     $posthover: $simeycolor;
     $postvisited: $posttitle;
+
+    $postpre: #f5b0b4;
+    $postprebg: desaturate( lighten( $bg, 11% ), 7% );
+    $postemphasis: #c4fcea;
     
     $fSans:     "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     $fSerif:    "Georgia", serif;

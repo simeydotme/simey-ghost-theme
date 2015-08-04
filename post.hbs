@@ -10,7 +10,8 @@
 
 
 <main class="content / wrap" role="main">
-    <article class="blog-post // {{post_class}}">
+
+    <article class="blog-post // {{post_class}} / txt-thin">
 
         <header class="blog-post__header / txt-c">
 
@@ -20,7 +21,7 @@
 
             <section class="blog-post__meta // txt-code">
                 <time class="blog-post__date // disp-b" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> 
-                <span class="blog-post__tags // txt-lower">{{tags separator=", "}}</span>
+                <span class="blog-post__tags // txt-lower">{{tags prefix="[ " separator=", " suffix=" ]"}}</span>
             </section>
 
         </header>

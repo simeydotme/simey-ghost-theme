@@ -4,7 +4,6 @@
         &__header {
 
             
-            
             margin: 5em 0;
 
         }
@@ -25,10 +24,120 @@
         font-size: 1.375em;
         color: darken( $fg, 5% );
 
-        p:first-child {
+        > p:first-child {
             
             font-size: 1.2em;
+
+        }
+
+        h1, h2, h3, h4, h5 {
+            
+            color: $fg;
+            margin: 1em 0; 
+
+        }
+
+        h5 { font-size: 1em; }
+        h4 { font-size: 1.2em; }
+        h3 { font-size: 1.4em; }
+        h2 { font-size: 1.6em; }
+        h1 { font-size: 2em; }
+
+        code {
+
+            color: $postpre;
+            background: $postprebg;
+            padding: 0.1em 0.3em 0.15em;
+            border-radius: 3px;
+
+        }
+
+        pre {
+            
+            color: $postpre;
+            background: $postprebg;
+            padding: 2em 28%;
+            margin: 0 -28%;
+            font-size: 16px;
+            line-height: 1.4;
+            overflow-x: auto;
+
+            > code {
+
+                color: inherit;
+                background: transparent;
+                padding: 0;
+
+            }
+
+        }
+
+        blockquote {
+
+            font-family: $fSerif;
             font-weight: 100;
+            font-style: italic;
+            font-size: 1em;
+
+        }
+
+        em, strong {
+
+            color: $postemphasis;
+
+        }
+
+        em {
+    
+            padding: 0 0.2em;
+
+        }
+
+        strong {
+
+            font-weight: 500;
+
+        }
+
+        ul, ol {
+            
+            padding: 0;
+
+        }
+
+        ul {
+
+            list-style: none;
+
+            li {
+
+                &:before {
+                    
+                    font-size: 1.5em;
+                    content: "\2022";
+                    position: absolute;
+                    margin-left: -1em;
+                    margin-top: -0.3em;
+
+                    color: $postemphasis;
+                    transition: all 0.5s ease;
+
+                }
+
+                &:hover:before {
+
+                    color: $blue;
+                    margin-left: -0.7em;
+
+                }
+
+                ul {
+
+                    padding-left: 1em;
+
+                }
+
+            }
 
         }
 
