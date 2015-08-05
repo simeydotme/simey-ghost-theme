@@ -47,6 +47,9 @@
 
             color: $postpre;
             background: $postprebg;
+            font-size: 0.75em;
+            position: relative;
+            top: -0.15em;
             padding: 0.1em 0.3em 0.15em;
             border-radius: 3px;
 
@@ -56,17 +59,18 @@
             
             color: $postpre;
             background: $postprebg;
-            padding: 2em 28%;
+            padding: 1.2em 28%;
             margin: 0 -28%;
-            font-size: 16px;
-            line-height: 1.4;
             overflow-x: auto;
 
             > code {
 
+                font-size: 16px;
+                line-height: 1.4;
                 color: inherit;
                 background: transparent;
                 padding: 0;
+                display: block;
 
             }
 
@@ -113,11 +117,10 @@
 
                 &:before {
                     
-                    font-size: 1.5em;
+                    font-size: 1em;
                     content: "\2022";
                     position: absolute;
                     margin-left: -1em;
-                    margin-top: -0.3em;
 
                     color: $postemphasis;
                     transition: all 0.5s ease;
@@ -126,8 +129,7 @@
 
                 &:hover:before {
 
-                    color: $blue;
-                    margin-left: -0.7em;
+                    margin-left: -0.8em;
 
                 }
 
