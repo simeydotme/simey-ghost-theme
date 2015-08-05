@@ -71,7 +71,7 @@
             left: 0;
             top: 0;
 
-            transition: all 1.5s ease;
+            transition: all 0.3s ease;
 
         }
 
@@ -80,6 +80,7 @@
             color: $simeycolor;
             opacity: 0;
 
+            transition: all 1.5s ease;
             transform: scale(1.5) rotate(-45deg);
 
         }
