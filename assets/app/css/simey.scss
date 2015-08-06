@@ -19,8 +19,8 @@
     $posthover: $simeycolor;
     $postvisited: $posttitle;
 
-    $postpre: #f5b0b4;
-    $postprebg: desaturate( lighten( $bg, 11% ), 7% );
+    $postpre: lighten( $coral, 1% );
+    $postprebg: desaturate( lighten( $bg, 2% ), 7% );
     $postemphasis: #c4fcea;
     
     $fSans:     "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -28,6 +28,12 @@
     $fHeading:  Avenir, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     $fSimey:    Asap, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     $fCode:     Menlo, Monaco, Consolas, monospace;
+
+
+
+    // ========================================================================================
+
+
 
     @import "../../../bower_components/normalize.css/normalize";
 
