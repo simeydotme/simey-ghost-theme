@@ -7,6 +7,7 @@ var gulp = require("gulp"),
     livereload = require("gulp-livereload"),
     rename = require("gulp-rename"),
     uglify = require("gulp-uglify"),
+    concat = require("gulp-concat"),
     autoprefixer = require("gulp-autoprefixer");
 
 
@@ -14,13 +15,13 @@ var gulp = require("gulp"),
 
 gulp.task("default", ["init", "watch"], function() {
 
-    console.log("  💫  👌 ");
+    console.log("\n  💫  👌 \n");
 
 });
 
 gulp.task("init", ["assets", "js", "img", "sass"], function() {
 
-    console.log(" 🌟 getting this show on the road... ")
+    console.log("\n\n\n 🌟 getting this show on the road... \n");
 
 });
 
@@ -44,37 +45,45 @@ gulp.task("assets", function() {
 
 });
 
-// gulp.task("svg", function() {
-
-//     var i = /<i data-icon="(.*)"><\/i>/g,
-//         o = "<svg class=\"$1\" role=\"presentation\"><use xlink:href=\"/assets/dist/img/svgdefs.svg#$1\"></use></svg>";
-
-//     gulp
-//         .src( "./**/*.hbs" )
-//         .pipe( replace( i, o ) )
-//         .pipe( gulp.dest("./") );
-
-// });
-
 gulp.task("js", ["clean:js"], function() {
 
-    var vendor = [
-        "./bower_components/svg4everybody/svg4everybody.js",
-        "./bower_components/svg4everybody/svg4everybody.ie8.js",
-        "./bower_components/jquery/dist/jquery.js",
-        "./bower_components/modernizr/modernizr.js" ];
+    var out = "./assets/dist/js",
+        vendorout = "./assets/dist/js/vendor",
+        modernizr = "./bower_components/modernizr/modernizr.js",
+        vendor = [
+            "./bower_components/svg4everybody/svg4everybody.ie8.js",
+            "./bower_components/jquery/dist/jquery.js",
+            "./bower_components/prism/prism.js" ];
+
 
     gulp.src( vendor )
-        .pipe( gulp.dest("./assets/dist/js/vendor") )
+        .pipe( gulp.dest( vendorout ) )
+
+        .pipe( concat("vendor.js") )
+        .pipe( gulp.dest( vendorout ) )
+
         .pipe( uglify() )
         .pipe( rename({ extname: ".min.js" }) )
-        .pipe( gulp.dest("./assets/dist/js/vendor") );
+        .pipe( gulp.dest( vendorout ) )
+
+        .pipe( concat("vendor.min.js") )
+        .pipe( gulp.dest( vendorout ) );
+
+
+    gulp.src( modernizr )
+        .pipe( gulp.dest( vendorout ) )
+
+        .pipe( uglify() )
+        .pipe( rename({ extname: ".min.js" }) )
+        .pipe( gulp.dest( vendorout ) );
+
 
     gulp.src( "./assets/app/js/**/*.js" )
-        .pipe( gulp.dest("./assets/dist/js") )
+        .pipe( gulp.dest( out ) )
+
         .pipe( uglify() )
         .pipe( rename({ extname: ".min.js" }) )
-        .pipe( gulp.dest("./assets/dist/js") );
+        .pipe( gulp.dest( out ) );
 
 });
 

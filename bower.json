@@ -19,6 +19,7 @@
     "jquery": "~2.1.4",
     "modernizr": "~2.8.3",
     "normalize.css": "~3.0.3",
-    "svg4everybody": "~1.0.0"
+    "svg4everybody": "~1.0.0",
+    "prism": "~1.0.1"
   }
 }
