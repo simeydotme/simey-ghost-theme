@@ -7,12 +7,64 @@
 
     var $document = $(document);
 
+    $.fn.titleLinks = function() {
+
+        return $(this).each(function(k, v) {
+
+            var $this = $(v),
+                content = $this.html(),
+                icons = {},
+                link;
+
+            icons.link = "<svg class=\"simicon-link\" role=\"presentation\">" +
+                "<use xmlns:xlink=\"http://www.w3.org/1999/xlink\" " +
+                "xlink:href=\"/assets/dist/img/svgdefs.svg#simicon-link\"> " +
+                "</use></svg>";
+
+            icons.arrow = "<svg class=\"simicon-arrow-right\" role=\"presentation\">" +
+                "<use xmlns:xlink=\"http://www.w3.org/1999/xlink\" " +
+                "xlink:href=\"/assets/dist/img/svgdefs.svg#simicon-arrow-right\"> " +
+                "</use></svg>";
+
+            link = "<a href=\"#" + $this.attr("id") + "\">" + content + "</a>";
+
+            $this.html( icons.link + icons.arrow + link );
+
+        });
+
+    };
+
     $document.ready(function() {
 
-        var $postContent = $(".post-content");
-        $postContent.fitVids();
+        var $post = $(".blog-post__content");
+        $post.fitVids();
+
+
+        $post.find("h1,h2,h3,h4,h5").titleLinks();
+
+
+
+
+
 
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,9 +101,5 @@
         console.info("http://twitter.com/simeydotme");
 
     }
-
-
-
-    
 
 })(jQuery);
