@@ -20,8 +20,17 @@
             </h1>
 
             <section class="blog-post__meta // txt-code">
-                <time class="blog-post__date // disp-b" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> 
+
+                <time 
+                    class="blog-post__date // disp-b" 
+                    datetime="{{ date format='YYYY-MM-DD' }}">
+
+                        {{ date format="Do MMMM YYYY" }}
+
+                </time> 
+
                 <span class="blog-post__tags // txt-lower">{{tags prefix="[ " separator=", " suffix=" ]"}}</span>
+            
             </section>
 
         </header>
