@@ -22,7 +22,7 @@
     .blog-post__content {
 
         font-size: 1.375em;
-        color: darken( $fg, 5% );
+        color: desaturate( darken( $fg, 3% ), 5% );
 
         > p:first-child {
             
