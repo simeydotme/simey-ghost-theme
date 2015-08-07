@@ -51,9 +51,26 @@ gulp.task("js", ["clean:js"], function() {
         vendorout = "./assets/dist/js/vendor",
         modernizr = "./bower_components/modernizr/modernizr.js",
         vendor = [
+
             "./bower_components/svg4everybody/svg4everybody.ie8.js",
             "./bower_components/jquery/dist/jquery.js",
-            "./bower_components/prism/prism.js" ];
+
+            // prism
+
+            "./bower_components/prism/prism.js",
+
+            "./bower_components/prism/components/prism-git.js",
+            "./bower_components/prism/components/prism-bash.js",
+            "./bower_components/prism/components/prism-powershell.js",
+
+            "./bower_components/prism/components/prism-markdown.js",
+            "./bower_components/prism/components/prism-handlebars.js",
+
+            "./bower_components/prism/components/prism-jsx.js",
+
+            "./bower_components/prism/components/prism-css-extras.js",
+            "./bower_components/prism/components/prism-scss.js",
+            "./bower_components/prism/components/prism-sass.js" ];
 
 
     gulp.src( vendor )
