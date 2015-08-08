@@ -21,7 +21,7 @@
 
     .blog-post__content {
 
-        font-size: 1.375em;
+        font-size: 1.25rem;
         color: desaturate( darken( $fg, 3% ), 5% );
 
         > p:first-child {
@@ -238,24 +238,10 @@
 
         hr {
             
-            height: 1px;
-            background: rgba( $postemphasis, 0.7 );
-            color: rgba( $postemphasis, 0.5 );
-            border: none;
-            margin: 2em -2em;
+            @extend .hr;
 
             &:before {
-
                 content: "\2248";
-                position: absolute;
-                font-size: 2em;
-                width: 1.6em;
-                text-align: center;
-                left: 50%;
-                margin-left: -0.8em;
-                background: $bgBody;
-                margin-top: -0.9em;
-
             }
 
         }
@@ -265,6 +251,8 @@
 
     @media screen and ( max-width: 46em ) {
         
+        font-size: 0.8rem;
+
         ul, ol {
             
             margin-left: 2em;
@@ -283,6 +271,12 @@
         blockquote {
 
             margin-left: 1em;
+
+        }
+
+        pre > code {
+
+            font-size: 0.75rem;
 
         }
         

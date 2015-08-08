@@ -15,7 +15,7 @@
 
         <header class="blog-post__header / txt-c">
 
-            <h1 class="blog-post__title // heading / biggest / txt-thin / clr-simey">
+            <h1 class="blog-post__title // heading / lg-biggest / sm-small / txt-thin / clr-simey">
                 {{title}}
             </h1>
 
@@ -39,37 +39,39 @@
 
 
         <section class="blog-post__content">
+
             {{content}}
+
         </section>
+
+        
+        <hr class="hr / end">
 
         <footer class="blog-post__footer">
 
         {{! Everything inside the #author tags pulls data from the author }}
         {{#author}}
 
-            {{#if image}}
-            <figure class="author-image">
-                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
-            </figure>
+            {{#if bio}}
+                
+            {{else}}
+                
             {{/if}}
 
-            <section class="author">
-                <h4><a href="{{url}}">{{name}}</a></h4>
+            {{#if image}}
+            
+            {{/if}}
 
-                {{#if bio}}
-                    <p>{{bio}}</p>
-                {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
-                {{/if}}
-                <div class="author-meta">
-                    {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-                    {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
-                </div>
+            <section class="authored-by / authored-by--blog-post // lg-float-l">
+
+                <h5 class="authored-by__author // heading / smallest / txt-bold / no-margin">
+                    Written by <a href="{{url}}">{{name}}</a> {{#if location}}in {{location}}{{/if}}</h4>
+
             </section>
 
         {{/author}}
 
-            <section class="share">
+            <section class="share // lg-float-r / lg-txt-r">
                 <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="">{{> svgicon iconname="twitter"}} Tweet this shit!</span>
