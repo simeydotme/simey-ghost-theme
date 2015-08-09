@@ -59,6 +59,7 @@
     .disp-b             { display: block; }
     .disp-i             { display: inline; }
     .disp-ib            { display: inline-block; }
+    .disp-n             { display: none; }
 
     .txt-sans           { font-family: $fSans; }
     .txt-serif          { font-family: $fSerif; }
@@ -131,6 +132,7 @@
     .lg-disp-b          { display: block; }
     .lg-disp-i          { display: inline; }
     .lg-disp-ib         { display: inline-block; }
+    .lg-disp-n          { display: none; }
 
     .lg-txt-l           { text-align: left; }
     .lg-txt-r           { text-align: right; }
@@ -191,6 +193,7 @@
     .sm-disp-b          { display: block; }
     .sm-disp-i          { display: inline; }
     .sm-disp-ib         { display: inline-block; }
+    .sm-disp-n          { display: none; }
 
     .sm-txt-l           { text-align: left; }
     .sm-txt-r           { text-align: right; }
