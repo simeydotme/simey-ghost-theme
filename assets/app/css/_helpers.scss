@@ -1,6 +1,17 @@
 
 
     // Helper Classes.
+    // 
+
+    .wrap { 
+
+        max-width: 45em; 
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+    }
     
     .clear {
         
@@ -45,21 +56,13 @@
         opacity: 0; 
     }
 
-    .biggest { font-size: 2.6rem; }
-    .big { font-size: 2.2rem; }
-    .small { font-size: 1.8rem; }
-    .smaller { font-size: 1.4rem; }
-    .smallest { font-size: 1rem; }
-
-    .wrap               { max-width: 45em; margin: auto; }
-
-    .float-l            { float: left; }
-    .float-r            { float: right; }
-
-    .disp-b             { display: block; }
-    .disp-i             { display: inline; }
-    .disp-ib            { display: inline-block; }
-    .disp-n             { display: none; }
+    .txt\+\+\+\+        { font-size: 3rem; }
+    .txt\+\+\+          { font-size: 2rem; }
+    .txt\+\+            { font-size: 1.5rem; }
+    .txt\+              { font-size: 1.25rem; }
+    .txt                { font-size: inherit; }
+    .txt-               { font-size: .875rem; }
+    .txt--              { font-size: .75rem; }
 
     .txt-sans           { font-family: $fSans; }
     .txt-serif          { font-family: $fSerif; }
@@ -72,10 +75,6 @@
     .txt-lower          { text-transform: lowercase; }
     .txt-upper          { text-transform: uppercase; }
 
-    .clr-simey          { color: $simeycolor; }
-    .clr-blue           { color: $blue; }
-    .clr-coral          { color: $coral; }
-
     .txt-thin           { font-weight: 100; }
     .txt-light          { font-weight: 200; }
     .txt-book           { font-weight: 400; }
@@ -84,13 +83,28 @@
     .txt-black          { font-weight: 700; }
     .txt-ultra          { font-weight: 900; }
 
+    .clr-simey          { color: $simeycolor; }
+    .clr-blue           { color: $blue; }
+    .clr-coral          { color: $coral; }
+
+    .float-l            { float: left; }
+    .float-r            { float: right; }
+
+    .disp-b             { display: block; }
+    .disp-i             { display: inline; }
+    .disp-ib            { display: inline-block; }
+    .disp-n             { display: none; }
+
+    .pos-r              { position: relative; }
+    .over-h             { overflow: hidden; }
+
     .thirty             { width: 30%; }
     .forty              { width: 40%; }
     .fifty              { width: 50%; }
     .sixty              { width: 60%; }
     .seventy            { width: 70%; }
 
-    .a-third            { width: 33%; }
+    .one-third          { width: 33%; }
     .two-thirds         { width: 66%; }
 
     .no-padding         { padding: 0; }
@@ -110,7 +124,7 @@
 
 
 
-@media screen and ( min-width: 40.1em ) {
+@media #{ $mql } {
 
     .lg-hidden { 
         position: absolute; 
@@ -120,19 +134,13 @@
         opacity: 0; 
     }
 
-    .lg-biggest { font-size: 3rem; }
-    .lg-big { font-size: 2.2rem; }
-    .lg-small { font-size: 1.8rem; }
-    .lg-smaller { font-size: 1.4rem; }
-    .lg-smallest { font-size: 1rem; }
-
-    .lg-float-l         { float: left; }
-    .lg-float-r         { float: right; }
-
-    .lg-disp-b          { display: block; }
-    .lg-disp-i          { display: inline; }
-    .lg-disp-ib         { display: inline-block; }
-    .lg-disp-n          { display: none; }
+    .lg-txt\+\+\+\+     { font-size: 3rem; }
+    .lg-txt\+\+\+       { font-size: 2rem; }
+    .lg-txt\+\+         { font-size: 1.5rem; }
+    .lg-txt\+           { font-size: 1.25rem; }
+    .lg-txt             { font-size: inherit; }
+    .lg-txt-            { font-size: .875rem; }
+    .lg-txt--           { font-size: .75rem; }
 
     .lg-txt-l           { text-align: left; }
     .lg-txt-r           { text-align: right; }
@@ -146,13 +154,21 @@
     .lg-txt-black       { font-weight: 700; }
     .lg-txt-ultra       { font-weight: 900; }
 
+    .lg-float-l         { float: left; }
+    .lg-float-r         { float: right; }
+
+    .lg-disp-b          { display: block; }
+    .lg-disp-i          { display: inline; }
+    .lg-disp-ib         { display: inline-block; }
+    .lg-disp-n          { display: none; }
+
     .lg-thirty          { width: 30%; }
     .lg-forty           { width: 40%; }
     .lg-fifty           { width: 50%; }
     .lg-sixty           { width: 60%; }
     .lg-seventy         { width: 70%; }
 
-    .lg-a-third         { width: 33%; }
+    .lg-one-third       { width: 33%; }
     .lg-two-thirds      { width: 66%; }
 
     .lg-no-padding      { padding: 0; }
@@ -171,13 +187,7 @@
 
 
 
-@media screen and ( max-width: 40em ) {
-
-    .sm-biggest { font-size: 2.2rem; }
-    .sm-big { font-size: 1.9rem; }
-    .sm-small { font-size: 1.6rem; }
-    .sm-smaller { font-size: 1.2rem; }
-    .sm-smallest { font-size: 1rem; }
+@media #{ $mqs } {
 
     .sm-hidden { 
         position: absolute; 
@@ -187,13 +197,12 @@
         opacity: 0; 
     }
 
-    .sm-float-l         { float: left; }
-    .sm-float-r         { float: right; }
-
-    .sm-disp-b          { display: block; }
-    .sm-disp-i          { display: inline; }
-    .sm-disp-ib         { display: inline-block; }
-    .sm-disp-n          { display: none; }
+    .sm-txt\+\+\+\+     { font-size: 3rem; }
+    .sm-txt\+\+         { font-size: 1.5rem; }
+    .sm-txt\+           { font-size: 1.25rem; }
+    .sm-txt             { font-size: inherit; }
+    .sm-txt-            { font-size: .875rem; }
+    .sm-txt--           { font-size: .75rem; }
 
     .sm-txt-l           { text-align: left; }
     .sm-txt-r           { text-align: right; }
@@ -207,13 +216,21 @@
     .sm-txt-black       { font-weight: 700; }
     .sm-txt-ultra       { font-weight: 900; }
 
+    .sm-float-l         { float: left; }
+    .sm-float-r         { float: right; }
+
+    .sm-disp-b          { display: block; }
+    .sm-disp-i          { display: inline; }
+    .sm-disp-ib         { display: inline-block; }
+    .sm-disp-n          { display: none; }
+
     .sm-thirty          { width: 30%; }
     .sm-forty           { width: 40%; }
     .sm-fifty           { width: 50%; }
     .sm-sixty           { width: 60%; }
     .sm-seventy         { width: 70%; }
 
-    .sm-a-third         { width: 33%; }
+    .sm-one-third       { width: 33%; }
     .sm-two-thirds      { width: 66%; }
 
     .sm-no-padding      { padding: 0; }

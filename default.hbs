@@ -29,23 +29,27 @@
 
     <body class="{{body_class}} // txt-sans / txt-book">
 
-        <div class="wrapper">
 
-            {{> header }}
 
-            <div class="body // {{#is "post"}}no-padding-t{{/is}}">
+
+        {{> header }}
+
+        <div class="content / over-h">
+            <div class="wrap">
 
                 {{! Everything else gets inserted here }}
                 {{{body}}}
-
+            
             </div>
-
-            {{> footer }}
-
-            {{! Ghost outputs important scripts and data with this tag }}
-            {{ghost_foot}}
-
         </div>
+
+        {{> footer }}
+
+
+
+
+        {{! Ghost outputs important scripts and data with this tag }}
+        {{ghost_foot}}
 
         {{! The main JavaScript file for Template }}
         <script type="text/javascript" src="{{asset "dist/js/vendor/vendor.min.js"}}"></script>

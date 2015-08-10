@@ -1,6 +1,7 @@
     
     .footer {
-
+        
+        position: relative;
         margin-top: 5em;
         padding: 3em;
 
@@ -12,12 +13,23 @@
             [class*=" simicon-"],
             [class^="simicon-"] {
 
+                position: absolute;
+                top: 3em;
+
                 &:first-child {
+                    left: -2em;
                     margin-right: 1em;
                 }
 
                 &:last-child {
+                    right: -2em;
                     margin-left: 1em;
+                }
+
+                @media screen and ( max-width: 40em ) {
+
+                    position: static;
+
                 }
 
             }

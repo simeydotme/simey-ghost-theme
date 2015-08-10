@@ -4,7 +4,13 @@
     * {
 
         box-sizing: border-box;
-        
+
+    }
+
+    html {
+
+        font-size: 16px;
+
     }
 
     html, 
@@ -13,18 +19,6 @@
         color: $fg;
         background: $bgBody;
         min-height: 100%;
-
-    }
-
-    body {
-
-        font-size: 1em;
-
-        @media screen and ( max-width: 60em ) {
-            
-            font-size: 0.9em;
-
-        }
 
     }
 

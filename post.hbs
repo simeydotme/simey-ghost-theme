@@ -9,89 +9,23 @@
 {{#if image}}{{/if}}
 
 
-<main class="content / wrap" role="main">
+<main class="main" role="main">
 
     <article class="blog-post // {{post_class}} / txt-light">
 
-        <header class="blog-post__header / txt-c">
 
-            <h1 class="blog-post__title // heading / lg-biggest / sm-small / txt-thin / clr-simey">
-                {{title}}
-            </h1>
-
-            <section class="blog-post__meta // txt-code">
-
-                <time 
-                    class="blog-post__date // disp-b" 
-                    datetime="{{ date format='YYYY-MM-DD' }}">
-
-                        {{ date format="Do MMMM YYYY" }}
-
-                </time> 
-
-                <span class="blog-post__tags // txt-lower">
-                    {{tags prefix="[ " separator=", " suffix=" ]"}}
-                </span>
-            
-            </section>
-
-        </header>
+        {{> post-header }}
 
 
-
-
-        <section class="blog-post__content">
+        <section class="blog-post__content // lg-txt+">
 
             {{content}}
 
         </section>
 
         
-        <hr class="hr / hr--end">
+        {{> post-footer }}
 
-        <footer class="blog-post__footer">
-
-        {{! Everything inside the #author tags pulls data from the author }}
-        {{#author}}
-
-            {{#if bio}}
-                
-            {{else}}
-                
-            {{/if}}
-
-            {{#if image}}
-            
-            {{/if}}
-
-            <section class="authored-by / authored-by--blog-post // lg-float-l">
-
-                <h5 class="authored-by__author // heading / smallest / txt-medium / no-margin">
-                    Written by <a href="{{url}}">{{name}}</a> {{#if location}}in {{location}}{{/if}}
-                </h5>
-
-            </section>
-
-        {{/author}}
-
-
-
-            <section class="share // lg-float-r / lg-txt-r">
-
-                <a 
-                    class="share__twitter"
-                    href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    
-                    {{> svgicon iconname="twitter"}} Tweet this shit!
-
-                </a>
-
-            </section>
-
-
-
-        </footer>
 
     </article>
 
