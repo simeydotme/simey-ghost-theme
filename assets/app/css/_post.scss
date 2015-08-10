@@ -247,7 +247,7 @@
 
 
 
-        @media screen and ( max-width: 46em ) {
+        @media #{ $mqs } {
             
             font-size: 1rem;
 

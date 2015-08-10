@@ -21,7 +21,7 @@
             &.github svg { top: 4px; }
             &.codepen svg { top:  4.5px; }
 
-            @media screen and ( max-width: 40em ) {
+            @media #{ $mqs } {
 
                 opacity: 0.8;
 
@@ -45,7 +45,7 @@
 
         }
             
-        @media screen and ( max-width: 40em ) {
+        @media #{ $mqs } {
 
             font-size: 1.4em;
             font-size: 7vw;
@@ -54,7 +54,7 @@
 
     }
 
-@media screen and ( min-width: 40em ) {
+@media #{ $mql } {
 
     header:hover .social {
 
