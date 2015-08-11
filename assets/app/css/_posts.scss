@@ -56,14 +56,14 @@
 
         &__stars {
 
-            font-size: 1.6em;
+            font-size: 1rem;
 
             position: absolute;
-            left: -1.7em;
-            top: 0.1em;
+            left: -3em;
+            top: 0.4em;
 
-            min-height: 1.5em;
-            min-width: 1em;
+            height: 2em;
+            width: 2em;
             background: $bgBody;
 
             z-index: 200;
@@ -74,10 +74,25 @@
 
             color: rgba( lighten( $bg, 60% ) , 0.6 );
             position: absolute;
-            left: 0;
-            top: 0;
+            left: 50%;
+            top: 50%;
+            height: 2em;
+            width: 2em;
+            margin-top: -1em;
+            margin-left: -1em;
 
             transition: all 0.3s ease;
+
+            svg {
+                
+                width: 2em;
+                height: 2em;
+                top: 0;
+                left: 0;
+                position: absolute;
+
+
+            }
 
         }
 
@@ -104,12 +119,7 @@
 
         }
 
-    }
-
-
-
-
-    
+    }  
 
     .loop-post__title:hover ~ .loop-post__stars .loop-post__star,
     .loop-post__stars:hover .loop-post__star {
@@ -129,10 +139,21 @@
     
 
 
+
+
+
+
+
+
+
+
     $firstBatch: 4;
     $secondBatch: 11;
 
     .loop-post {
+
+        // first batch of posts will be slightly smaller
+        // and not as spread out.
 
         &:nth-of-type( n + #{$firstBatch} ) {
 
@@ -147,7 +168,9 @@
 
             .loop-post__stars {
 
-                top: -0.2em;
+                top: -0.1em;
+                font-size: 0.9em;
+                left: -3.2em;
 
             }
 
@@ -162,7 +185,8 @@
 
 
 
-
+        // second batch will be even smaller, and 
+        // even closer, without the date shown.
 
         &:nth-of-type( n + #{$secondBatch} ) {
             
@@ -182,9 +206,9 @@
 
             .loop-post__stars {
 
-                top: -0.2em;
-                left: -1.9em;
-                font-size: 1.4em;
+                top: -0.1em;
+                font-size: 0.8em;
+                left: -3.45em;
 
             }
 

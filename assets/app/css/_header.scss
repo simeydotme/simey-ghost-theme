@@ -39,7 +39,7 @@
         &__dotme {
                 
             font-weight: normal;
-            color: lighten( $bg, 55% );
+            color: desaturate( lighten( $bg, 40% ), 10% );
 
         }
 

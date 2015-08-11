@@ -33,7 +33,7 @@
             
             padding: 1em 1.5em;
             margin-left: -4px;
-            color: lighten( $bg, 50% );
+            color: desaturate( lighten( $bg, 40% ), 10% );
 
             &:hover {
                 color: white;

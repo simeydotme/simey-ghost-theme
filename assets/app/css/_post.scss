@@ -30,6 +30,7 @@
 
         h1, h2, h3, h4, h5 {
             
+            font-family: $fHeading;
             position: relative;
             color: lighten( $fg, 10% );
             font-weight: 500;
@@ -76,11 +77,11 @@
 
         }
 
-        h5 { font-size: 1em; }
-        h4 { font-size: 1.25em; }
-        h3 { font-size: 1.5em; }
-        h2 { font-size: 1.875em; }
         h1 { font-size: 2em; }
+        h2 { font-size: 1.5em; }
+        h3 { font-size: 1.25em; }
+        h4 { font-size: 1em; }
+        h5 { font-size: 1em; text-transform: uppercase; }
 
         img {
 
@@ -92,7 +93,7 @@
         code {
 
             color: $postpre;
-            background: $postprebg;
+            background: $prebg;
             font-size: 0.75em;
             position: relative;
             top: -0.15em;
@@ -103,13 +104,12 @@
 
         pre {
             
-            background: $postprebg;
-            padding: 1.2em 28% 0;
-            margin: 0 -28%;
+            padding: 1.2em 3rem;
+            margin: 0 -3rem;
 
             > code {
 
-                font-size: 1rem;
+                font-size: 0.9em;
                 line-height: 1.4;
                 color: inherit;
                 background: transparent;
@@ -237,10 +237,6 @@
         hr {
             
             @extend .hr;
-
-            &:before {
-                content: "\2248";
-            }
 
         }
 
