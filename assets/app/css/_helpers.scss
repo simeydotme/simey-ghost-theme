@@ -5,7 +5,7 @@
 
     .wrap { 
 
-        max-width: 45em; 
+        max-width: 50em; 
         margin-left: auto;
         margin-right: auto;
         padding-left: 1.5rem;
@@ -56,13 +56,18 @@
         opacity: 0; 
     }
 
-    .txt\+\+\+\+        { font-size: 3rem; }
-    .txt\+\+\+          { font-size: 2rem; }
-    .txt\+\+            { font-size: 1.5rem; }
-    .txt\+              { font-size: 1.25rem; }
+    .txt\+4             { font-size: 3rem; }
+    .txt\+3             { font-size: 2rem; }
+    .txt\+2             { font-size: 1.5rem; }
+    .txt\+1             { font-size: 1.25rem; }
     .txt                { font-size: inherit; }
-    .txt-               { font-size: .875rem; }
-    .txt--              { font-size: .75rem; }
+    .txt-1              { font-size: .875rem; }
+    .txt-2              { font-size: .75rem; }
+
+    .lh\+2              { line-height: 2; }
+    .lh\+1              { line-height: 1.5; }
+    .lh                 { line-height: 1.25; }
+    .lh-1               { line-height: 1; }
 
     .txt-sans           { font-family: $fSans; }
     .txt-serif          { font-family: $fSerif; }
@@ -134,13 +139,18 @@
         opacity: 0; 
     }
 
-    .lg-txt\+\+\+\+     { font-size: 3rem; }
-    .lg-txt\+\+\+       { font-size: 2rem; }
-    .lg-txt\+\+         { font-size: 1.5rem; }
-    .lg-txt\+           { font-size: 1.25rem; }
+    .lg-txt\+4          { font-size: 3rem; }
+    .lg-txt\+3          { font-size: 2rem; }
+    .lg-txt\+2          { font-size: 1.5rem; }
+    .lg-txt\+1          { font-size: 1.25rem; }
     .lg-txt             { font-size: inherit; }
-    .lg-txt-            { font-size: .875rem; }
-    .lg-txt--           { font-size: .75rem; }
+    .lg-txt-1           { font-size: .875rem; }
+    .lg-txt-2           { font-size: .75rem; }
+
+    .lg-lh\+2           { line-height: 2; }
+    .lg-lh\+1           { line-height: 1.5; }
+    .lg-lh              { line-height: 1.25; }
+    .lg-lh-1            { line-height: 1; }
 
     .lg-txt-l           { text-align: left; }
     .lg-txt-r           { text-align: right; }
@@ -197,12 +207,18 @@
         opacity: 0; 
     }
 
-    .sm-txt\+\+\+\+     { font-size: 3rem; }
-    .sm-txt\+\+         { font-size: 1.5rem; }
-    .sm-txt\+           { font-size: 1.25rem; }
+    .sm-txt\+4          { font-size: 3rem; }
+    .sm-txt\+3          { font-size: 2rem; }
+    .sm-txt\+2          { font-size: 1.5rem; }
+    .sm-txt\+1          { font-size: 1.25rem; }
     .sm-txt             { font-size: inherit; }
-    .sm-txt-            { font-size: .875rem; }
-    .sm-txt--           { font-size: .75rem; }
+    .sm-txt-1           { font-size: .875rem; }
+    .sm-txt-2           { font-size: .75rem; }
+
+    .sm-lh\+2           { line-height: 2; }
+    .sm-lh\+1           { line-height: 1.5; }
+    .sm-lh              { line-height: 1.25; }
+    .sm-lh-1            { line-height: 1; }
 
     .sm-txt-l           { text-align: left; }
     .sm-txt-r           { text-align: right; }
