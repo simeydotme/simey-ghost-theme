@@ -1,12 +1,12 @@
 
-    $bg: #241e2e;
-    $bgBody: desaturate( lighten( $bg, 5% ), 7% );
+    $bg: #211D27;
+    $bgBody: desaturate( lighten( $bg, 2% ), 5% );
     $bgStart: #413763;
     $fg: #d1dedb;
 
-    $simeycolor: #62efab;
+    $simeycolor: #40FFB1;
     $blue: #66c9e5;
-    $coral: #d797a2;
+    $coral: #FFA186;
     $violet: #cdadfd;
 
     $link: $blue;
@@ -19,8 +19,8 @@
     $posthover: $simeycolor;
     $postvisited: $posttitle;
 
-    $postpre: lighten( $coral, 1% );
-    $postprebg: #22222b;
+    $postpre: $coral;
+    $prebg: $bg;
     $postemphasis: #c4fcea;
     
     $fSans:     "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -32,9 +32,10 @@
 
 
     // ========================================================================================
-
-    $mqs: "screen and ( max-width: 40em )";
-    $mql: "screen and ( min-width: 40.00001em )";
+    
+    $wrap: 50em;
+    $mqs: "screen and ( max-width: 50em )";
+    $mql: "screen and ( min-width: 50.00001em )";
 
     // ========================================================================================
 
