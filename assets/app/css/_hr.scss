@@ -3,22 +3,9 @@
 
         height: 1px;
         border: none;
+        border-bottom: 1px solid $simeycolor;
         margin: 2em -3rem;
         position: relative;
-        opacity: 0.5;
-
-        &:after {
-            
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 1px;
-            width: 100%;
-            
-            background-size: 25px;
-            background-image: linear-gradient( 90deg, transparent 0%, $coral 25%, $coral 50%, transparent 75%, transparent 100% );
-
-        }
+        opacity: 0.3;
 
     }

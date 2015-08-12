@@ -50,11 +50,16 @@
 
             }
 
-            &:target svg.simicon-arrow-right {
+            &:target {
                 
                 color: $simeycolor;
-                opacity: 1;
-                transform: translateX(0);
+
+                svg.simicon-arrow-right {
+                    
+                    opacity: 1;
+                    transform: translateX(0);
+
+                }
 
             }
 
