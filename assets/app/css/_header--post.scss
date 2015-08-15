@@ -1,5 +1,6 @@
 
-    .header--post {
+    .header--post,
+    [class*="header--error-"] {
 
         padding: 2em 0;
 
@@ -27,11 +28,13 @@
 
             float: right;
             font-size: 1.6em;
-            top: -0.1em;
 
             @media screen and ( max-width: 30em ) {
                 
-                display: none;
+                float: none;
+                position: relative;
+                left: 0.1em;
+                margin-top: 0.5em;
 
             }
 

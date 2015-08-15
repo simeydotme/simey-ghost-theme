@@ -21,12 +21,6 @@
             &.github svg { top: 4px; }
             &.codepen svg { top:  4.5px; }
 
-            @media #{ $mqs } {
-
-                opacity: 0.8;
-
-            }
-
         }
 
         &__link {
@@ -49,6 +43,24 @@
 
             font-size: 1.4em;
             font-size: 7vw;
+
+            width: auto;
+            display: block;
+            text-align: center;
+
+            &__item {
+
+                opacity: 0.8;
+                width: 33%;
+                float: left;
+
+            }
+
+            &__link {
+
+                padding: 0;
+
+            }
 
         }
 
