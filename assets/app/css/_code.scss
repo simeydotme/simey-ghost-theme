@@ -1,17 +1,17 @@
 
     $comment: slategrey;
-    $red: #FFBFDE;
-    $blue: #82DAFF;
-    $green: #A6FFE1;
-    $purple: #B6BAFF;
+    $red: #FF96C5;
+    $blue: #6DCFF8;
+    $green: #67FFCC;
+    $purple: #9DA1FF;
     $yellow: #FFFCD1;
-    $salmon: #FFCBBE;
+    $salmon: #FFD5C3;
     $grey: #ccc;
 
 
     pre[class*="language-"] {
         
-        color: rgba( white, 0.8 );
+        color: #E6EFF7;
         background: $prebg;
 
         direction: ltr;
@@ -88,13 +88,13 @@
             &.hexcode,
             &.regex,
             &.constant,
-            &.operator,
             &.url {
 
                 color: $purple;
 
             }
 
+            &.operator,
             &.important,
             &.atrule {
 
