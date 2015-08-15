@@ -72,7 +72,7 @@
 
         &__star {
 
-            color: rgba( lighten( $bg, 60% ) , 0.6 );
+            color: rgba( lighten( $bg, 60% ) , 0.4 );
             position: absolute;
             left: 50%;
             top: 50%;
@@ -101,8 +101,8 @@
             color: $simeycolor;
             opacity: 0;
 
-            transition: all 1.5s ease;
-            transform: scale(1.5) rotate(-45deg);
+            transition: all 1.5s ease-in;
+            transform: translateY(0.1em) scale(0.5) rotate(-90deg);
 
         }
 
@@ -129,8 +129,8 @@
         &--filled {
 
             opacity: 1;
+            transition-timing-function: ease-out;
             transition-duration: 0.22s;
-
             transform: scale(1);
 
         }
