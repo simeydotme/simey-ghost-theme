@@ -5,7 +5,8 @@
 
     "use strict";
 
-    var $document = $(document);
+    var $document = $(document),
+        $body = $("body");
 
     $.fn.titleLinks = function() {
 
@@ -38,11 +39,39 @@
 
         var $post = $(".blog-post__content"),
             $titles = $post.find("h1,h2,h3,h4,h5"),
-            $codes = $post.find("pre");
+            $codes = $post.find("pre"),
+            guy, toggle = true;
 
         $post.fitVids();
         $titles.titleLinks();
         $codes.addClass("prettyprint");
+
+
+        if ( $body.hasClass("error-page") ) {
+
+            guy = setInterval(function() {
+
+                if ( toggle ) {
+
+                    $(".guy").html( "¯\\_( ツ)_/¯" );
+                    toggle = false;
+
+                } else {
+
+                    $(".guy").html( "¯\\_(ツ )_/¯" );
+                    toggle = true;
+
+                }
+
+            }, 1000 );
+
+            $(".guy").on("click", function() {
+
+                clearTimeout( guy );
+
+            });
+
+        }
 
     });
 
