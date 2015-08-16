@@ -1,10 +1,31 @@
-    
+
+
     .hr {
+        
+        opacity: 0.8;
+        color: lighten( $bg , 50% );
+        letter-spacing: .25rem;
+
+        border: none;
+        margin: 4rem 0 5rem;
+
+        &:before {
+
+            content: "￭ ￭ ￭";
+            display: block;
+            text-align: center;
+
+        }
+
+    }
+
+
+    .hr--line {
 
         height: 1px;
         border: none;
         border-bottom: 1px solid $simeycolor;
-        margin: 2em -3rem;
+        margin: 2em 0;
         position: relative;
         opacity: 0.3;
 

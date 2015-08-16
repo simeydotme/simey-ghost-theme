@@ -28,12 +28,6 @@
         color: $link;
         transition: color 1s ease;
         text-decoration: none;
-        
-        &:visited {
-            
-            color: $linkVisited;
-
-        }
 
         &:hover {
 

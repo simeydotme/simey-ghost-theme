@@ -130,12 +130,11 @@
             font-weight: 100;
             font-style: italic;
             font-size: 0.875em;
-            border-left: 2px solid rgba( $postemphasis, 0.3 );
-            border-bottom: 2px solid rgba( $postemphasis, 0.3 );
+            border-top: 1px solid rgba( $postemphasis, 0.2 );
+            border-bottom: 1px solid rgba( $postemphasis, 0.2 );
 
-            margin-left: 0;
-            margin-right: 1em;
-            padding: 0.5em 0 0.5em 1.5em;
+            margin: 1.5em -1.5em;
+            padding: 1.5em;
             position: relative;
 
             > p:first-child {
@@ -152,26 +151,26 @@
                 color: rgba( $postemphasis, 0.5 );
                 position: absolute;
                 background: $bgBody;
-                height: 0.5em;
+                height: 1.5rem;
+                width: 1.5rem;
+                line-height: 1;
+                text-align: left;
 
             }
 
             &:before {
                 
                 content: "\201c";
-                margin-left: -1em;
-                padding: 0 0.1em;
-                line-height: 1;
+                left: 1rem;
+                top: -0.7rem;
 
             }
 
             &:after {
                 
                 content: "\201d";
-                right: 0.2em;
-                padding: 0;
-                width: 0.6em;
-                line-height: 1;
+                right: 1rem;
+                bottom: -0.9rem;
 
             }
 
@@ -243,10 +242,8 @@
 
         }
 
-
-
-
-        @media #{ $mqs } {
+        
+        @media screen and ( max-width: 55em ) {
 
             ul, ol {
                 
@@ -263,9 +260,14 @@
 
             }
 
+        }
+
+
+        @media #{ $mqs } {
+
             blockquote {
 
-                margin-left: 1em;
+                margin: 2em 0;
 
             }
 
