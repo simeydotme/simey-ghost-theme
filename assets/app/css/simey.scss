@@ -49,13 +49,14 @@
     @import "code";
     @import "hr";
 
-    @import "header";
-    @import "header--post";
-    @import "body";
-    @import "navigation";
-    @import "footer";
+    @import "blocks/header";
+    @import "blocks/social";
+    @import "blocks/header--post";
+    @import "blocks/body";
+    @import "blocks/navigation";
+    @import "blocks/footer";
     
-    @import "posts";
-    @import "post";
+    @import "blocks/posts";
+    @import "blocks/post";
 
     @import "helpers";
