@@ -48,7 +48,7 @@
     figure {
 
         margin: 0;
-        
+
     }
 
     img,
@@ -67,3 +67,18 @@
     }
 
 
+    ::-moz-selection {
+
+        color: white;
+        background: rgb(49, 142, 111);
+        background: rgba(49, 142, 111, 0.98);
+
+    }
+
+    ::selection {
+
+        color: white;
+        background: rgb(49, 142, 111);
+        background: rgba(49, 142, 111, 0.98);
+
+    }

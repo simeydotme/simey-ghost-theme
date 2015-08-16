@@ -1,0 +1,56 @@
+
+    .profile {
+
+        
+
+    }
+
+
+
+    .profile-name {
+        
+        font-family: $fHeading;
+        font-size: 5rem;
+        margin: 1.5rem 0 0 2rem;
+
+    }
+
+
+@media screen and ( max-width: 51rem ) {
+    
+    .profile-name {
+    
+        font-size: 10vw;
+        margin: 2vw;
+
+    }
+
+}
+
+
+@media screen and ( max-width: 24rem ) {
+    
+    .profile-image {
+
+        float: none;
+        width: auto;
+
+    }
+
+    .profile-info {
+
+        float: none;
+        width: auto;
+        padding: 0;
+
+    }
+
+    .profile-name {
+    
+        text-align: center;
+        font-size: 2rem;
+        margin: 1rem;
+
+    }
+
+}

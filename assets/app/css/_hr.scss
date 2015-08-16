@@ -24,9 +24,9 @@
 
         height: 1px;
         border: none;
-        border-bottom: 1px solid $simeycolor;
+        border-bottom: 1px solid lighten( $bg , 50% );
         margin: 2em 0;
         position: relative;
-        opacity: 0.3;
+        opacity: 0.8;
 
     }

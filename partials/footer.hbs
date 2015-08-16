@@ -42,10 +42,16 @@
     {{/post}}
     {{/is}}
 
-    </aside>
-
     {{#is "author"}}
-        hmmm
+    {{#author}}
+        {{#if location}}
+            <span class="profile-location // txt+2">
+                Currently based in {{location}}
+            </span>
+        {{/if}}
+    {{/author}}
     {{/is}}
+
+    </aside>
 
 </footer>

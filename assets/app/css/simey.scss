@@ -1,7 +1,6 @@
 
     $bg: #1F222D;
     $bgBody: #2B2E39;
-    $bgStart: #413763;
     $fg: #d1dedb;
 
     $simeycolor: #40FFB1;
@@ -43,6 +42,8 @@
 
     @import "../../../bower_components/normalize.css/normalize";
 
+    @import "helpers";
+
     @import "base";
     @import "svg";
     @import "button";
@@ -59,5 +60,3 @@
     
     @import "blocks/posts";
     @import "blocks/post";
-
-    @import "helpers";
