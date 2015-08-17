@@ -1,0 +1,230 @@
+
+    // Helper Classes.
+
+    .wrap { 
+
+        max-width: 50em; 
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+    }
+    
+    .clear {
+        
+        display: block;
+
+        &:after {
+
+            content: "";
+            display: table;
+            clear: both;
+            
+        }
+
+    }
+
+    .no-list {
+
+        list-style: none;
+
+    }
+
+    .heading {
+
+        font-family: $fHeading;
+        font-size: 2rem;
+        line-height: 1.4;
+        font-weight: 500;
+
+    }
+
+
+
+
+
+
+
+    .hidden    { 
+        position: absolute; 
+        width: 1px; 
+        height: 1px; 
+        overflow: hidden; 
+        opacity: 0; 
+    }
+
+    .txt\+5             { font-size: 5rem; }
+    .txt\+4             { font-size: 3rem; }
+    .txt\+3             { font-size: 2rem; }
+    .txt\+2             { font-size: 1.5rem; }
+    .txt\+1             { font-size: 1.25rem; }
+    .txt                { font-size: inherit; }
+    .txt-1              { font-size: .875rem; }
+    .txt-2              { font-size: .75rem; }
+
+    .lh\+2              { line-height: 2; }
+    .lh\+1              { line-height: 1.5; }
+    .lh                 { line-height: 1.25; }
+    .lh-1               { line-height: 1; }
+
+    .txt-sans           { font-family: $fSans; }
+    .txt-serif          { font-family: $fSerif; }
+    .txt-code           { font-family: $fCode; }
+
+    .txt-l              { text-align: left; }
+    .txt-r              { text-align: right; }
+    .txt-c              { text-align: center; }
+
+    .txt-lower          { text-transform: lowercase; }
+    .txt-upper          { text-transform: uppercase; }
+
+    .txt-thin           { font-weight: 100; }
+    .txt-light          { font-weight: 200; }
+    .txt-book           { font-weight: 400; }
+    .txt-semi           { font-weight: 500; }
+    .txt-bold           { font-weight: 600; }
+    .txt-black          { font-weight: 700; }
+    .txt-ultra          { font-weight: 900; }
+
+    .clr-default        { color: $fg; }
+    .clr-simey          { color: $simeycolor; }
+    .clr-blue           { color: $blue; }
+    .clr-coral          { color: $coral; }
+
+    .float-l            { float: left; }
+    .float-r            { float: right; }
+
+    .disp-b             { display: block; }
+    .disp-i             { display: inline; }
+    .disp-ib            { display: inline-block; }
+    .disp-n             { display: none; }
+
+    .pos-r              { position: relative; }
+    .over-h             { overflow: hidden; }
+
+    .thirty             { width: 30%; }
+    .forty              { width: 40%; }
+    .fifty              { width: 50%; }
+    .sixty              { width: 60%; }
+    .seventy            { width: 70%; }
+
+    .one-third          { width: 33%; }
+    .two-thirds         { width: 66%; }
+    
+    .cursor-normal      { cursor: default; }
+    .cursor-hand        { cursor: pointer; }
+
+
+
+@media #{ $mql } {
+
+    .lg-hidden { 
+        position: absolute; 
+        width: 1px; 
+        height: 1px; 
+        overflow: hidden; 
+        opacity: 0; 
+    }
+
+    .lg-txt\+5          { font-size: 5rem; }
+    .lg-txt\+4          { font-size: 3rem; }
+    .lg-txt\+3          { font-size: 2rem; }
+    .lg-txt\+2          { font-size: 1.5rem; }
+    .lg-txt\+1          { font-size: 1.25rem; }
+    .lg-txt             { font-size: inherit; }
+    .lg-txt-1           { font-size: .875rem; }
+    .lg-txt-2           { font-size: .75rem; }
+
+    .lg-lh\+2           { line-height: 2; }
+    .lg-lh\+1           { line-height: 1.5; }
+    .lg-lh              { line-height: 1.25; }
+    .lg-lh-1            { line-height: 1; }
+
+    .lg-txt-l           { text-align: left; }
+    .lg-txt-r           { text-align: right; }
+    .lg-txt-c           { text-align: center; }
+
+    .lg-txt-thin        { font-weight: 100; }
+    .lg-txt-light       { font-weight: 200; }
+    .lg-txt-book        { font-weight: 400; }
+    .lg-txt-semi        { font-weight: 500; }
+    .lg-txt-bold        { font-weight: 600; }
+    .lg-txt-black       { font-weight: 700; }
+    .lg-txt-ultra       { font-weight: 900; }
+
+    .lg-float-l         { float: left; }
+    .lg-float-r         { float: right; }
+
+    .lg-disp-b          { display: block; }
+    .lg-disp-i          { display: inline; }
+    .lg-disp-ib         { display: inline-block; }
+    .lg-disp-n          { display: none; }
+
+    .lg-thirty          { width: 30%; }
+    .lg-forty           { width: 40%; }
+    .lg-fifty           { width: 50%; }
+    .lg-sixty           { width: 60%; }
+    .lg-seventy         { width: 70%; }
+
+    .lg-one-third       { width: 33%; }
+    .lg-two-thirds      { width: 66%; }
+
+}
+
+
+
+@media #{ $mqs } {
+
+    .sm-hidden { 
+        position: absolute; 
+        width: 1px; 
+        height: 1px; 
+        overflow: hidden; 
+        opacity: 0; 
+    }
+
+    .sm-txt\+5          { font-size: 5rem; }
+    .sm-txt\+4          { font-size: 3rem; }
+    .sm-txt\+3          { font-size: 2rem; }
+    .sm-txt\+2          { font-size: 1.5rem; }
+    .sm-txt\+1          { font-size: 1.25rem; }
+    .sm-txt             { font-size: inherit; }
+    .sm-txt-1           { font-size: .875rem; }
+    .sm-txt-2           { font-size: .75rem; }
+
+    .sm-lh\+2           { line-height: 2; }
+    .sm-lh\+1           { line-height: 1.5; }
+    .sm-lh              { line-height: 1.25; }
+    .sm-lh-1            { line-height: 1; }
+
+    .sm-txt-l           { text-align: left; }
+    .sm-txt-r           { text-align: right; }
+    .sm-txt-c           { text-align: center; }
+
+    .sm-txt-thin        { font-weight: 100; }
+    .sm-txt-light       { font-weight: 200; }
+    .sm-txt-book        { font-weight: 400; }
+    .sm-txt-semi        { font-weight: 500; }
+    .sm-txt-bold        { font-weight: 600; }
+    .sm-txt-black       { font-weight: 700; }
+    .sm-txt-ultra       { font-weight: 900; }
+
+    .sm-float-l         { float: left; }
+    .sm-float-r         { float: right; }
+
+    .sm-disp-b          { display: block; }
+    .sm-disp-i          { display: inline; }
+    .sm-disp-ib         { display: inline-block; }
+    .sm-disp-n          { display: none; }
+
+    .sm-thirty          { width: 30%; }
+    .sm-forty           { width: 40%; }
+    .sm-fifty           { width: 50%; }
+    .sm-sixty           { width: 60%; }
+    .sm-seventy         { width: 70%; }
+
+    .sm-one-third       { width: 33%; }
+    .sm-two-thirds      { width: 66%; }
+
+}
