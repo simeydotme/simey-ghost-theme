@@ -88,8 +88,7 @@
 
         img {
 
-            max-width: 100%;
-            border-radius: 3px;
+            @extend .img;
 
         }
 
@@ -112,7 +111,6 @@
 
             > code {
 
-                font-size: 0.9em;
                 line-height: 1.4;
                 color: inherit;
                 background: transparent;
