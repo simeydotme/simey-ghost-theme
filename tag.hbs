@@ -3,30 +3,33 @@
 
 {{! If we have a tag cover, display that - else blog cover - else nothing }}
 
-{{#if tag.image}}
-{{else}}
-    {{#if @blog.cover}}
-        {{@blog.cover}}
-    {{/if}}
-{{/if}}
+{{#tag}}
 
-<div class="vertical">
-    <div class="main-header-content inner">
-        <h1 class="page-title">{{tag.name}}</h1>
-        <h2 class="page-description">
-            {{#if tag.description}}
-                {{tag.description}}
-            {{else}}
-                A {{pagination.total}}-post collection
+    {{> tag-header }}
+
+    <main id="content" class="clear" role="main">
+
+
+        <section class="divided-section / lg-thirty / lg-float-l">
+
+            {{#if image}}
+                <img src="{{image}}" alt="Image assosiated with this post">
             {{/if}}
-        </h2>
-    </div>
-</div>
 
-{{! The main content area on the homepage }}
-<main class="content" role="main">
+        </section>
 
-    {{! The tag below includes the post loop - partials/loop.hbs }}
-    {{> "loop"}}
 
-</main>
+{{/tag}}
+
+
+        <section class="divided-section / lg-seventy / lg-float-l">
+
+            <h2 class="hidden">Posts</h2>
+
+            {{! The tag below includes the post loop - partials/loop.hbs }}
+            {{> "loop"}}
+
+        </section>
+
+
+    </main>
