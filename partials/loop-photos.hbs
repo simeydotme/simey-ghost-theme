@@ -1,0 +1,32 @@
+
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+{{#has tag="unlooped"}}
+{{else}}
+
+<article 
+    class="loop-photo // {{ post_class }} // txt-c / lg-float-l / lg-fifty / back-cover / img"
+    style="background-image: url( {{image}} );">
+
+    <a class="loop-photo__title-link // disp-b" href="{{url}}">
+        <h3 class="loop-photo__title // heading / txt+2 / txt-thin / pad-v5 / pad-h2 / mar0">
+            {{{title}}}
+        </h3>
+    </a>
+
+    <time 
+        class="loop-post__date // hidden" 
+        datetime="{{ date format='YYYY-MM-DD' }}">
+
+        {{ date format="Do MMMM YYYY" }}
+
+    </time>
+
+</article>
+
+
+{{/has}}
+{{/foreach}}
+
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}

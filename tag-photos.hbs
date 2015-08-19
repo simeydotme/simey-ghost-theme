@@ -1,0 +1,18 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! If we have a tag cover, display that - else blog cover - else nothing }}
+
+{{#tag}}
+
+    {{> tag-header }}
+
+{{/tag}}
+
+    <main id="content" class="clear" role="main">
+
+        <h2 class="hidden">Posts</h2>
+
+        {{> "loop-photos"}}
+
+    </main>
