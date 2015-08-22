@@ -5,13 +5,19 @@
 {{else}}
 
 <article 
-    class="loop-photo // {{ post_class }} // txt-c / lg-float-l / lg-fifty / back-cover / img"
-    style="background-image: url( {{image}} );">
+    class="loop-photo // {{ post_class }} // txt-c / lg-float-l / lg-fifty / pad-h2 / mar-b2">
 
-    <a class="loop-photo__title-link // disp-b" href="{{url}}">
-        <h3 class="loop-photo__title // heading / txt+2 / txt-thin / pad-v5 / pad-h2 / mar0">
+    <a 
+        class="loop-photo__title-link // disp-b / back-cover back-center / img"
+        href="{{url}}"
+        style="background-image: url( {{image}} );">
+
+        <div class="loop-photo__overlay"></div>
+
+        <h3 class="loop-photo__title // heading / txt+2 / txt-thin / pad-h2 / mar0">
             {{{title}}}
         </h3>
+
     </a>
 
     <time 
