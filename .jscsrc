@@ -38,7 +38,7 @@
     "requireOperatorBeforeLineBreak": true,
     "requirePaddingNewLinesAfterUseStrict": true,
     "requirePaddingNewLinesBeforeExport": true,
-    "requirePaddingNewlinesBeforeKeywords": true,
+    "requirePaddingNewlinesBeforeKeywords": ["do", "for", "if", "switch", "try", "void", "while", "return"],
     "requirePaddingNewLinesBeforeLineComments": { "allExcept": "firstAfterCurly" },
     "requirePaddingNewlinesInBlocks": 1,
     "requireParenthesesAroundIIFE": true,
@@ -71,6 +71,5 @@
     "safeContextKeyword": ["_this", "$this"],
     "validateIndentation": 4,
     "validateParameterSeparator": ", ",
-    "validateLineBreaks": "LF",
     "validateQuoteMarks": true
 }
