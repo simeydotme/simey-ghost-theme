@@ -54,3 +54,106 @@
         }
 
     }
+
+
+    .post-template.tag-photos .blog-post {
+        
+        img { 
+
+            float: left;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+
+        }
+
+        p:after { 
+
+            @extend .clear;
+
+        }
+
+        // only 1 image in a row.
+        // http://quantityqueries.com/
+
+        img:nth-last-child(-n+1):first-child, 
+        img:nth-last-child(-n+1):first-child ~ img { 
+
+            max-width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+
+        }
+        
+            
+        @media #{ $mqm } {
+            
+            // at least 2 items in a row.
+
+            img:nth-last-child(n+2), 
+            img:nth-last-child(n+2) ~ img {
+
+                max-width: 44%;
+                margin-left: 3%;
+                margin-right: 3%;
+
+            }
+
+            // at least 3 images in a row
+
+            img:nth-last-child(n+3), 
+            img:nth-last-child(n+3) ~ img {
+
+                max-width: 29%;
+                margin-left: 2%;
+                margin-right: 2%;
+
+            }
+            
+            // at least 4 images in a row
+
+            img:nth-last-child(n+4), 
+            img:nth-last-child(n+4) ~ img {
+
+                max-width: 21%;
+                margin-left: 2%;
+                margin-right: 2%;
+
+            }
+
+        }
+
+    }
+
+    .zoomable {
+        
+        cursor: pointer;
+        user-select: none;
+
+    }
+
+    .zoom-photo {
+        
+        $pos: 0;
+
+        position: fixed;
+        left: $pos;
+        right: $pos;
+        top: $pos;
+        bottom: $pos;
+        opacity: 0;
+        text-align: center;
+        background: rgba( $bg , 0.8 );
+
+        padding: 1rem;
+
+        transform: scale(0.1) translateY(10rem);
+        transition: all 0.3s ease;
+
+        &--zoomed {
+
+            transform: scale(1);
+            opacity: 1;
+
+        }
+
+    }
