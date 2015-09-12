@@ -1,8 +1,11 @@
 
 {{! This is the post loop - each post will be output using this markup }}
+
+
 {{#foreach posts}}
-{{#has tag="unlooped"}}
-{{else}}
+{{^has tag="unlooped"}}
+{{^has tag="photos"}}
+
 <article class="loop-post // {{ post_class }}">
 
     <header class="loop-post__header">
@@ -60,6 +63,7 @@
 </article>
 
 
+{{/has}}
 {{/has}}
 {{/foreach}}
 

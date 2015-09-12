@@ -1,11 +1,11 @@
 
 {{! This is the post loop - each post will be output using this markup }}
-{{#foreach posts}}
-{{#has tag="unlooped"}}
-{{else}}
 
-<article 
-    class="loop-photo // {{ post_class }} // txt-c / lg-float-l / lg-fifty / pad-h2 / mar-b2">
+
+{{#foreach posts}}
+{{^has tag="unlooped"}}
+
+<article class="loop-photo // {{ post_class }} // txt-c / lg-float-l / lg-fifty / pad-h2 / mar-b2">
 
     <a 
         class="loop-photo__title-link // disp-b / back-cover back-center / img"
