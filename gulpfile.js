@@ -96,10 +96,14 @@ gulp.task("js", ["clean:js"], function() {
 
 
     gulp.src( "./assets/app/js/**/*.js" )
+
         .pipe( gulp.dest( out ) )
 
         .pipe( uglify() )
         .pipe( rename({ extname: ".min.js" }) )
+        .pipe( gulp.dest( out ) )
+
+        .pipe( concat("combined.min.js") )
         .pipe( gulp.dest( out ) );
 
 });
@@ -132,11 +136,11 @@ gulp.task("img", ["clean:img"], function() {
 
 gulp.task("clean", function() {
 
+    console.log("\n All clean! \n");
+
     return gulp
         .src("./assets/dist", { read: false })
         .pipe( clean() );
-
-    console.log("\n All clean! \n");
 
 });
 
