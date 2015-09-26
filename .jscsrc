@@ -23,7 +23,7 @@
     "disallowTrailingWhitespace": true,
     "disallowYodaConditions": true,
 
-    "requireAlignedObjectValues": "ignoreFunction",
+    "requireAlignedObjectValues": false,
     "requireAnonymousFunctions": true,
     "requireBlocksOnNewline": 1,
     "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
