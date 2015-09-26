@@ -131,6 +131,13 @@
 
     }
 
+    .zoom-photo,
+    .zoom-photo .zoomable {
+
+        transition: all 0.3s ease, opacity 0.15s ease;
+
+    }
+
     .zoom-photo {
         
         $pos: 0;
@@ -141,19 +148,41 @@
         top: $pos;
         bottom: $pos;
         opacity: 0;
-        text-align: center;
         background: rgba( $bg , 0.8 );
 
-        padding: 1rem;
+        padding: 2rem;
 
-        transform: scale(0.1) translateY(10rem);
-        transition: all 0.3s ease;
+        .zoomable {
+
+            position: absolute;
+
+            top: 50%; left: 50%;
+            transform: translate(-50%, -6rem ) scale(0.1);
+
+        }
+
+        .zoom-fullsize {
+
+            width: 100%;
+            position: absolute;
+            bottom: 1.5em;
+            left: 0;
+            text-align: center;
+
+        }
 
         &--zoomed {
 
-            transform: scale(1);
             opacity: 1;
 
+            .zoomable {
+
+                transform: translate( -50% , -50% ) scale(1);
+
+            }
+
         }
+
+        .zoom-link {}
 
     }
