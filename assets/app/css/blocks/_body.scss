@@ -7,11 +7,8 @@
     }
 
     .divided-section {
-
-        padding: 2em;
-        position: relative;
             
-        &:nth-child(even) {
+        &:nth-of-type(even) {
 
             &:after {
 
@@ -29,13 +26,13 @@
 
         @media #{ $mql } {
 
-            &:nth-child(odd) {
+            &:nth-of-type(odd) {
 
                 padding-left: 0;
                 
             }
             
-            &:nth-child(even) {
+            &:nth-of-type(even) {
 
                 padding-right: 0;
 
@@ -45,7 +42,7 @@
 
         @media #{ $mqs } {
 
-            &:nth-child(even) {
+            &:nth-of-type(even) {
 
                 margin-left: 1em;
                 

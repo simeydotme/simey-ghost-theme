@@ -2,7 +2,6 @@
     .button,
     .button:visited {
 
-        padding: 0.2em 1em 0.35em;
         border: 1px solid;
         border-radius: 4px;
         color: desaturate( darken( $simeycolor, 10% ) , 50% );
