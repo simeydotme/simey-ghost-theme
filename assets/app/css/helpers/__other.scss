@@ -100,16 +100,6 @@
     .disp-ib            { display: inline-block; }
     .disp-n             { display: none; }
 
-    .pos-r              { position: relative; }
-    .pos-a              { position: absolute; }
-    .pos-s              { position: static; }
-    .pos-f              { position: fixed; }
-
-    .flow-h             { overflow: hidden; }
-    .flow-v             { overflow: visible; }
-    .flow-s             { overflow: scroll; }
-    .flow-a             { overflow: auto; }
-
     .thirty             { width: 30%; }
     .forty              { width: 40%; }
     .fifty              { width: 50%; }
@@ -171,21 +161,6 @@
     .lg-disp-ib         { display: inline-block; }
     .lg-disp-n          { display: none; }
 
-    .lg-pos-r           { position: relative; }
-    .lg-pos-a           { position: absolute; }
-    .lg-pos-s           { position: static; }
-    .lg-pos-f           { position: fixed; }
-
-    .lg-flow-h          { overflow: hidden; }
-    .lg-flow-v          { overflow: visible; }
-    .lg-flow-s          { overflow: scroll; }
-    .lg-flow-a          { overflow: auto; }
-
-    .lg-disp-b          { display: block; }
-    .lg-disp-i          { display: inline; }
-    .lg-disp-ib         { display: inline-block; }
-    .lg-disp-n          { display: none; }
-
     .lg-thirty          { width: 30%; }
     .lg-forty           { width: 40%; }
     .lg-fifty           { width: 50%; }
@@ -237,21 +212,6 @@
 
     .sm-float-l         { float: left; }
     .sm-float-r         { float: right; }
-
-    .sm-disp-b          { display: block; }
-    .sm-disp-i          { display: inline; }
-    .sm-disp-ib         { display: inline-block; }
-    .sm-disp-n          { display: none; }
-
-    .sm-pos-r           { position: relative; }
-    .sm-pos-a           { position: absolute; }
-    .sm-pos-s           { position: static; }
-    .sm-pos-f           { position: fixed; }
-
-    .sm-flow-h          { overflow: hidden; }
-    .sm-flow-v          { overflow: visible; }
-    .sm-flow-s          { overflow: scroll; }
-    .sm-flow-a          { overflow: auto; }
 
     .sm-disp-b          { display: block; }
     .sm-disp-i          { display: inline; }

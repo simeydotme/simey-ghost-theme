@@ -1,0 +1,24 @@
+
+
+    .flow-h             { overflow: hidden; }
+    .flow-v             { overflow: visible; }
+    .flow-s             { overflow: scroll; }
+    .flow-a             { overflow: auto; }
+
+@media #{ $mql } {
+
+    .lg-flow-h          { overflow: hidden; }
+    .lg-flow-v          { overflow: visible; }
+    .lg-flow-s          { overflow: scroll; }
+    .lg-flow-a          { overflow: auto; }
+
+}
+
+@media #{ $mqs } {
+
+    .sm-flow-h          { overflow: hidden; }
+    .sm-flow-v          { overflow: visible; }
+    .sm-flow-s          { overflow: scroll; }
+    .sm-flow-a          { overflow: auto; }
+
+}

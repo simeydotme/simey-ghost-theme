@@ -1,0 +1,24 @@
+
+
+    .pos-r              { position: relative; }
+    .pos-a              { position: absolute; }
+    .pos-s              { position: static; }
+    .pos-f              { position: fixed; }
+
+@media #{ $mql } {
+
+    .lg-pos-r           { position: relative; }
+    .lg-pos-a           { position: absolute; }
+    .lg-pos-s           { position: static; }
+    .lg-pos-f           { position: fixed; }
+
+}
+
+@media #{ $mqs } {
+
+    .sm-pos-r           { position: relative; }
+    .sm-pos-a           { position: absolute; }
+    .sm-pos-s           { position: static; }
+    .sm-pos-f           { position: fixed; }
+
+}
