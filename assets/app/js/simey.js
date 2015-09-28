@@ -99,11 +99,14 @@
 
                 if ( $navButton.hasClass("isClosed") ) {
 
-                    navigator.vibrate( 100 );
+                    navigator.vibrate([100, 100, 200]);
+
+                } else {
+
+                    navigator.vibrate( 200 );
 
                 }
 
-                navigator.vibrate( 200 );
             }
 
         });
