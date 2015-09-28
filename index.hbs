@@ -25,7 +25,7 @@
 <main id="content" class="clear" role="main">
 
 
-    <section class="divided-section / lg-thirty / lg-float-l">
+    <section class="nav-wrapper isClosed // divided-section / pos-r / lg-pad3 / lg-thirty / lg-float-l">
 
         {{#if @blog.navigation}}
         {{navigation}}
@@ -34,8 +34,18 @@
     </section>
 
 
+    <a href="#" class="nav__expand isClosed // button / pos-f / txt+3 // lg-disp-n // sm-disp-b">
+        <span class="nav__menu">
+            {{> svgicon iconname="menu"}}
+        </span>
+        <span class="nav__cross">
+            {{> svgicon iconname="cross"}}
+        </span>
+    </a>
 
-    <section class="divided-section / lg-seventy / lg-float-l">
+
+
+    <section class="divided-section / pos-r / pad3 / lg-seventy / lg-float-l">
 
         <h2 class="hidden">Posts</h2>
 

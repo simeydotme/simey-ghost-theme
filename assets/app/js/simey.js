@@ -35,11 +35,20 @@
 
     };
 
+
+
+
+
     $document.ready(function() {
+
+
+
 
         var $post = $(".blog-post__content"),
             $titles = $post.find("h1,h2,h3,h4,h5"),
             $codes = $post.find("pre"),
+            $navWrapper = $(".nav-wrapper"),
+            $navButton = $(".nav__expand"),
             guy, toggle = true;
 
         $post.fitVids();
@@ -72,6 +81,20 @@
             });
 
         }
+
+
+
+
+        $navButton.on("click.nav", function() {
+
+            $(this)
+                .add( $navWrapper )
+                .toggleClass("isClosed");
+
+        });
+
+        
+
 
     });
 
