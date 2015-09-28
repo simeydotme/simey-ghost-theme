@@ -18,7 +18,7 @@
 
     .blog-post__content {
 
-        color: desaturate( darken( $fg, 3% ), 5% );
+        color: $postbody;
 
         > p:first-child {
             
@@ -30,7 +30,7 @@
             
             font-family: $fHeading;
             position: relative;
-            color: lighten( $fg, 10% );
+            color: $posttitle;
             font-weight: 500;
             margin: 1em 0;
 

@@ -13,14 +13,15 @@
     $linkVisited: $violet;
 
     $star: #fbff60;
-
-    $posttitle: saturate( $blue, 30% );
+    
+    $postbody: #c2c8d9;
+    $posttitle: lighten( $postbody, 7% );
     $posthover: $simeycolor;
     $postvisited: $posttitle;
-
+    
     $postpre: #d7ffed;
     $prebg: $bg;
-    $postemphasis: #eafff8;
+    $postemphasis: #e5fbff;
     
     $fSans:     "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     $fSerif:    "Georgia", serif;
