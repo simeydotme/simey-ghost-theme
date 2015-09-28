@@ -5,10 +5,54 @@ var gulp = require("gulp"),
     sass = require("gulp-sass"),
     clean = require("gulp-clean"),
     livereload = require("gulp-livereload"),
-    rename = require("gulp-rename"),
     uglify = require("gulp-uglify"),
     concat = require("gulp-concat"),
-    autoprefixer = require("gulp-autoprefixer");
+    autoprefixer = require("gulp-autoprefixer"),
+    gulpif = require("gulp-if"),
+
+    yargs = require("yargs").argv,
+
+    prod, js;
+
+
+
+prod = yargs.prod;
+
+js = {
+
+    out: "./assets/dist/js",
+    vendorout: "./assets/dist/js/vendor",
+    modernizr: "./bower_components/modernizr/modernizr.js",
+
+    vendor: [
+
+        "./bower_components/svg4everybody/svg4everybody.ie8.js",
+        "./bower_components/jquery/dist/jquery.js",
+
+        // prism
+
+        "./bower_components/prism/prism.js",
+
+        "./bower_components/prism/components/prism-git.js",
+        "./bower_components/prism/components/prism-bash.js",
+        "./bower_components/prism/components/prism-powershell.js",
+
+        "./bower_components/prism/components/prism-markdown.js",
+        "./bower_components/prism/components/prism-handlebars.js",
+
+        "./bower_components/prism/components/prism-jsx.js",
+
+        "./bower_components/prism/components/prism-css-extras.js",
+        "./bower_components/prism/components/prism-scss.js",
+        "./bower_components/prism/components/prism-sass.js" ]
+
+};
+
+
+
+
+
+
 
 
 
@@ -47,64 +91,28 @@ gulp.task("assets", function() {
 
 gulp.task("js", ["clean:js"], function() {
 
-    var out = "./assets/dist/js",
-        vendorout = "./assets/dist/js/vendor",
-        modernizr = "./bower_components/modernizr/modernizr.js",
-        vendor = [
+    gulp.src( js.vendor )
 
-            "./bower_components/svg4everybody/svg4everybody.ie8.js",
-            "./bower_components/jquery/dist/jquery.js",
-
-            // prism
-
-            "./bower_components/prism/prism.js",
-
-            "./bower_components/prism/components/prism-git.js",
-            "./bower_components/prism/components/prism-bash.js",
-            "./bower_components/prism/components/prism-powershell.js",
-
-            "./bower_components/prism/components/prism-markdown.js",
-            "./bower_components/prism/components/prism-handlebars.js",
-
-            "./bower_components/prism/components/prism-jsx.js",
-
-            "./bower_components/prism/components/prism-css-extras.js",
-            "./bower_components/prism/components/prism-scss.js",
-            "./bower_components/prism/components/prism-sass.js" ];
-
-
-    gulp.src( vendor )
-        .pipe( gulp.dest( vendorout ) )
+        .pipe( gulpif( prod, uglify() ) )
+        .pipe( gulp.dest( js.vendorout ) )
 
         .pipe( concat("vendor.js") )
-        .pipe( gulp.dest( vendorout ) )
-
-        .pipe( uglify() )
-        .pipe( rename({ extname: ".min.js" }) )
-        .pipe( gulp.dest( vendorout ) )
-
-        .pipe( concat("vendor.min.js") )
-        .pipe( gulp.dest( vendorout ) );
+        .pipe( gulp.dest( js.vendorout ) );
 
 
-    gulp.src( modernizr )
-        .pipe( gulp.dest( vendorout ) )
+    gulp.src( js.modernizr )
 
-        .pipe( uglify() )
-        .pipe( rename({ extname: ".min.js" }) )
-        .pipe( gulp.dest( vendorout ) );
+        .pipe( gulpif( prod, uglify() ) )
+        .pipe( gulp.dest( js.vendorout ) );
 
 
     gulp.src( "./assets/app/js/**/*.js" )
 
-        .pipe( gulp.dest( out ) )
+        .pipe( gulpif( prod, uglify() ) )
+        .pipe( gulp.dest( js.out ) )
 
-        .pipe( uglify() )
-        .pipe( rename({ extname: ".min.js" }) )
-        .pipe( gulp.dest( out ) )
-
-        .pipe( concat("combined.min.js") )
-        .pipe( gulp.dest( out ) );
+        .pipe( concat("combined.js") )
+        .pipe( gulp.dest( js.out ) );
 
 });
 
@@ -125,13 +133,6 @@ gulp.task("img", ["clean:img"], function() {
         .pipe( gulp.dest("./assets/dist/img") );
 
 });
-
-
-
-
-
-
-
 
 
 gulp.task("clean", function() {

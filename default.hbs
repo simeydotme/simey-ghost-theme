@@ -19,7 +19,7 @@
 
         {{! Styles'n'Scripts }}
         <link rel="stylesheet" type="text/css" href="{{asset "dist/css/simey.css"}}" />
-        <script src="{{asset "dist/js/vendor/modernizr.min.js"}}"></script>
+        <script src="{{asset "dist/js/vendor/modernizr.js"}}"></script>
         {{> fonts }}
 
         {{! Ghost outputs important style and meta data with this tag }}
@@ -52,8 +52,8 @@
         {{ghost_foot}}
 
         {{! The main JavaScript file for Template }}
-        <script type="text/javascript" src="{{asset "dist/js/vendor/vendor.min.js"}}"></script>
-        <script type="text/javascript" src="{{asset "dist/js/combined.min.js"}}"></script>
+        <script type="text/javascript" src="{{asset "dist/js/vendor/vendor.js"}}"></script>
+        <script type="text/javascript" src="{{asset "dist/js/combined.js"}}"></script>
         {{>analytics}}
 
     </body>
