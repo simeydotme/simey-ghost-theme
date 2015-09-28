@@ -49,7 +49,11 @@
             $codes = $post.find("pre"),
             $navWrapper = $(".nav-wrapper"),
             $navButton = $(".nav__expand"),
-            guy, toggle = true;
+
+            vibration = typeof navigator.vibrate !== "undefined",
+
+            guy, 
+            toggle = true;
 
         $post.fitVids();
         $titles.titleLinks();
@@ -87,13 +91,24 @@
 
         $navButton.on("click.nav", function() {
 
-            $(this)
+            $navButton
                 .add( $navWrapper )
                 .toggleClass("isClosed");
 
+            if ( vibration ) {
+
+                if ( $navButton.hasClass("isClosed") ) {
+
+                    navigator.vibrate( 100 );
+
+                }
+
+                navigator.vibrate( 200 );
+            }
+
         });
 
-        
+
 
 
     });
