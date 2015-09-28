@@ -47,10 +47,6 @@
         var $post = $(".blog-post__content"),
             $titles = $post.find("h1,h2,h3,h4,h5"),
             $codes = $post.find("pre"),
-            $navWrapper = $(".nav-wrapper"),
-            $navButton = $(".nav__expand"),
-
-            vibration = typeof navigator.vibrate !== "undefined",
 
             guy, 
             toggle = true;
@@ -83,61 +79,6 @@
                 clearTimeout( guy );
 
             });
-
-        }
-
-
-
-
-        $navButton.on("click.nav", function( e ) {
-
-            $navButton
-                .add( $navWrapper )
-                .toggleClass("isClosed");
-
-            $body
-                .toggleClass("navIsOpen");
-
-            if ( vibration ) {
-
-                if ( $navButton.hasClass("isClosed") ) {
-
-                    navigator.vibrate([100, 100, 200]);
-
-                } else {
-
-                    navigator.vibrate( 200 );
-
-                }
-
-            }
-
-            e.preventDefault();
-
-        });
-
-        if ( typeof window.matchMedia !== "undefined" ) {
-
-            var mq = window.matchMedia("(min-width: 46rem)"),
-                testmq;
-
-            mq.onchange = testmq = function() {
-
-                if ( mq.matches ) {
-
-                    $navButton
-                        .add( $navWrapper )
-                        .addClass("isClosed");
-
-                    $body
-                        .removeClass("navIsOpen");
-
-                }
-
-            };
-
-
-            testmq();
 
         }
 
