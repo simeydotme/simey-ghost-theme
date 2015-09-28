@@ -44,15 +44,19 @@
 
 
 
+    @mixin hidden {
 
-
-    .hidden    { 
         position: absolute; 
         width: 1px; 
         height: 1px; 
         overflow: hidden; 
         opacity: 0; 
+        top: 0;
+        left: 0;
+
     }
+
+    .hidden             { @include hidden; }
 
     .txt\+5             { font-size: 5rem; }
     .txt\+4             { font-size: 3rem; }
@@ -119,13 +123,7 @@
 
 @media #{ $mql } {
 
-    .lg-hidden { 
-        position: absolute; 
-        width: 1px; 
-        height: 1px; 
-        overflow: hidden; 
-        opacity: 0; 
-    }
+    .lg-hidden          { @include hidden; }
 
     .lg-txt\+5          { font-size: 5rem; }
     .lg-txt\+4          { font-size: 3rem; }
@@ -176,13 +174,7 @@
 
 @media #{ $mqs } {
 
-    .sm-hidden { 
-        position: absolute; 
-        width: 1px; 
-        height: 1px; 
-        overflow: hidden; 
-        opacity: 0; 
-    }
+    .sm-hidden          { @include hidden; }
 
     .sm-txt\+5          { font-size: 5rem; }
     .sm-txt\+4          { font-size: 3rem; }
