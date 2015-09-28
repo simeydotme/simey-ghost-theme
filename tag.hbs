@@ -7,22 +7,22 @@
 
     {{> tag-header }}
 
-    <main id="content" class="clear" role="main">
+    <main id="content" class="clear / {{#if image}}mar-t4{{else}}mar-t5{{/if}}" role="main">
 
+        {{#if image}}
 
-        <section class="divided-section / lg-thirty / lg-float-l">
+        <section class="txt-c / mar-b3">
 
-            {{#if image}}
-                <img src="{{image}}" class="img" alt="Image associated with this tag">
-            {{/if}}
+            <img src="{{image}}" class="img" alt="Image associated with this tag">
 
         </section>
 
+        {{/if}}
 
 {{/tag}}
 
 
-        <section class="divided-section / lg-seventy / lg-float-l">
+        <section class="lg-pad-h4 pad-v3">
 
             <h2 class="hidden">Posts</h2>
 
