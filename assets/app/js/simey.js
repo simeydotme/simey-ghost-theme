@@ -89,11 +89,14 @@
 
 
 
-        $navButton.on("click.nav", function() {
+        $navButton.on("click.nav", function( e ) {
 
             $navButton
                 .add( $navWrapper )
                 .toggleClass("isClosed");
+
+            $body
+                .toggleClass("navIsOpen");
 
             if ( vibration ) {
 
@@ -109,7 +112,34 @@
 
             }
 
+            e.preventDefault();
+
         });
+
+        if ( typeof window.matchMedia !== "undefined" ) {
+
+            var mq = window.matchMedia("(min-width: 46rem)"),
+                testmq;
+
+            mq.onchange = testmq = function() {
+
+                if ( mq.matches ) {
+
+                    $navButton
+                        .add( $navWrapper )
+                        .addClass("isClosed");
+
+                    $body
+                        .removeClass("navIsOpen");
+
+                }
+
+            };
+
+
+            testmq();
+
+        }
 
 
 

@@ -14,24 +14,7 @@
 
     $document.ready(function() {
 
-        var mq = window.matchMedia("(min-width: 36rem)"),
-            testmq;
 
-        mq.onchange = testmq = function() {
-
-            if ( mq.matches ) {
-
-                imgzoom.large.init();
-                imgzoom.small.destroy();
-
-            } else {
-
-                imgzoom.large.destroy();
-                imgzoom.small.init();
-
-            }
-
-        };
 
         imgzoom.large.init = function() {
 
@@ -112,7 +95,32 @@
         };
 
 
-        testmq();
+
+        if ( typeof window.matchMedia !== "undefined" ) {
+
+            var mq = window.matchMedia("(min-width: 36rem)"),
+                testmq;
+
+            mq.onchange = testmq = function() {
+
+                if ( mq.matches ) {
+
+                    imgzoom.large.init();
+                    imgzoom.small.destroy();
+
+                } else {
+
+                    imgzoom.large.destroy();
+                    imgzoom.small.init();
+
+                }
+
+            };
+
+
+            testmq();
+
+        }
 
     });
 
