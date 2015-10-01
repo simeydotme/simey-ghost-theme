@@ -9,6 +9,7 @@ var gulp = require("gulp"),
     concat = require("gulp-concat"),
     autoprefixer = require("gulp-autoprefixer"),
     gulpif = require("gulp-if"),
+    sourcemaps = require("gulp-sourcemaps"),
 
     yargs = require("yargs").argv,
 
@@ -127,8 +128,10 @@ gulp.task("sass", ["clean:sass"], function() {
 
     return gulp
         .src("./assets/app/css/**/*.scss")
+        .pipe( sourcemaps.init() )
         .pipe( sass( opts ).on("error", sass.logError ) )
         .pipe( autoprefixer("last 5 versions") )
+        .pipe( sourcemaps.write("../maps") )
         .pipe( gulp.dest("./assets/dist/css") )
         .pipe( livereload( 1337 ) );
 
