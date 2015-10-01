@@ -118,9 +118,16 @@ gulp.task("js", ["clean:js"], function() {
 
 gulp.task("sass", ["clean:sass"], function() {
 
+    var opts = {
+
+        outputStyle: ( prod ) ? "compressed" : "expanded",
+        sourceComments: !prod,
+
+    };
+
     return gulp
         .src("./assets/app/css/**/*.scss")
-        .pipe( sass().on("error", sass.logError ) )
+        .pipe( sass( opts ).on("error", sass.logError ) )
         .pipe( autoprefixer("last 5 versions") )
         .pipe( gulp.dest("./assets/dist/css") )
         .pipe( livereload( 1337 ) );
