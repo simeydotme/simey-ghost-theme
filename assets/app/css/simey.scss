@@ -12,6 +12,10 @@
     $linkHover: $coral;
     $linkVisited: $violet;
 
+    $looptitle: #c2c8d9;
+    $looplink: lighten( $looptitle, 6% );
+    $loopvisited: darken( $looptitle, 6% );
+    $loophover: $simeycolor;
     $star: #fbff60;
     
     $postbody: #c2c8d9;

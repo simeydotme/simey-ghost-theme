@@ -21,7 +21,7 @@
         
         &__title {
 
-            color: $posttitle;
+            color: $looptitle;
 
             @media #{ $mqs } {
 
@@ -30,16 +30,18 @@
             }
 
             &-link {
+            
+                color: $looplink;
 
                 &:visited {
 
-                    color: $postvisited;
+                    color: $loopvisited;
 
                 }
 
                 &:hover {
 
-                    color: $posthover;
+                    color: $loophover;
 
                 }
 
@@ -112,7 +114,7 @@
             color: $simeycolor;
             opacity: 0;
 
-            transition: opacity 1.5s $cubicIn, transform 0.1s linear 1.5s;
+            transition: opacity 1.5s $cubicEase, transform 0.1s linear 1.5s;
             transform: translateY(0.1em) scale(0.5) rotate(-90deg);
 
         }
