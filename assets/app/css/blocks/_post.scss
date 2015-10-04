@@ -194,7 +194,7 @@
 
         strong {
 
-            font-weight: 500;
+            @extend .txt-bold;
 
         }
 
