@@ -117,8 +117,11 @@
 
             };
 
-
             testmq();
+
+        } else {
+
+            imgzoom.large.init();
 
         }
 

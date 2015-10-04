@@ -37,6 +37,37 @@
 
 
 
+    $.fn.horizontalRules = function( settings ) {
+
+        var defaults = {
+            position: "after"
+        }, opts, html;
+
+        opts = $.extend( defaults, settings );
+        html = $("<div class=\"hr\" />");
+
+        return $(this).each(function() {
+
+            var $this = $(this);
+
+            if ( opts.position === "after" ) {
+
+                $this
+                    .hide()
+                    .after( html );
+
+            } else if ( opts.position === "before" ) {
+
+                $this
+                    .hide()
+                    .before( html );
+
+            }
+
+        });
+
+    };
+
 
 
     $document.ready(function() {
@@ -47,6 +78,7 @@
         var $post = $(".blog-post__content"),
             $titles = $post.find("h1,h2,h3,h4,h5"),
             $codes = $post.find("pre"),
+            $hrs = $post.find("hr"),
 
             guy, 
             toggle = true;
@@ -54,7 +86,14 @@
         $post.fitVids();
         $titles.titleLinks();
         $codes.addClass("prettyprint");
+        $hrs.horizontalRules();
 
+
+
+
+
+
+        // error page fun thing.
 
         if ( $body.hasClass("error-page") ) {
 
@@ -107,7 +146,7 @@
 
 
 
-
+    // console easter egg.
 
     if ( window.console && console.warn && console.info && console.error ) {
 
