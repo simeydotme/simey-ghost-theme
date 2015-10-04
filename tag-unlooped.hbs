@@ -1,0 +1,17 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! If we have a tag cover, display that - else blog cover - else nothing }}
+
+{{#tag}}
+
+    {{> tag-header }}
+
+{{/tag}}
+
+    <main id="content" class="clear // txt-c" role="main">
+
+        <p class="txt+1 / pad-t4">Actually, I'd prefer you didn't see these.</p>
+        <p class="clr-simey / txt+5 / mar0 / pad-b3">( ^.^;)</p>
+
+    </main>
