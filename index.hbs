@@ -25,6 +25,8 @@
 <main id="content" class="clear" role="main">
 
 
+{{#if posts}}
+
     <section class="nav-wrapper // divided-section / pos-r / lg-pad3 / lg-thirty / lg-float-l">
 
         {{#if @blog.navigation}}
@@ -53,6 +55,20 @@
         {{> "loop"}}
 
     </section>
+
+{{else}}
+
+
+    <h2 class="heading / txt+4 / clr-simey / txt-black / mar-b0 / txt-c">
+	Soon
+    </h2>
+
+    <p class="txt+1 / mar-t0 / txt-c">
+        Promise.
+    </p>
+
+
+{{/if}}
 
 
 </main>
