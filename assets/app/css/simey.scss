@@ -29,8 +29,8 @@
     
     $fSans:     "Segoe UI", "Helvetica Neue", "Source Sans Pro", Arial, sans-serif;
     $fSerif:    "Georgia", serif;
-    $fHeading:  Avenir, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    $fSimey:    Asap, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    $fHeading:  Avenir, $fSans;
+    $fSimey:    Asap, $fSans;
     $fCode:     Menlo, Monaco, Consolas, monospace;
 
     // ========================================================================================
