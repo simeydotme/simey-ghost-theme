@@ -130,50 +130,19 @@
 
             font-family: $fSerif;
             font-weight: 100;
-            font-style: italic;
             font-size: 0.875em;
-            border-top: 1px solid rgba( $postemphasis, 0.2 );
-            border-bottom: 1px solid rgba( $postemphasis, 0.2 );
+            border-left: 3px solid rgba( $postemphasis, 0.2 );
 
-            margin: 1.5em -1.5em;
-            padding: 1.5em;
+            margin: 2em 0 2em -2em;
+            padding: 0 0 0 2em;
             position: relative;
 
             > p:first-child {
                 margin-top: 0;
             }
+
             > p:last-child {
                 margin-bottom: 0;
-            }
-
-            &:before,
-            &:after {
-
-                font-size: 2.4em;
-                color: rgba( $postemphasis, 0.5 );
-                position: absolute;
-                background: $bgBody;
-                height: 1.5rem;
-                width: 1.5rem;
-                line-height: 1;
-                text-align: left;
-
-            }
-
-            &:before {
-                
-                content: "\201c";
-                left: 1rem;
-                top: -0.7rem;
-
-            }
-
-            &:after {
-                
-                content: "\201d";
-                right: 1rem;
-                bottom: -0.9rem;
-
             }
 
         }
