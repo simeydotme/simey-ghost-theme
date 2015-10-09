@@ -218,7 +218,7 @@
         }
 
         
-        @media screen and ( max-width: 55em ) {
+        @media screen and ( max-width: 55rem ) {
 
             ul, ol {
                 
@@ -235,25 +235,6 @@
 
             }
 
-        }
-
-
-        @media #{ $mqs } {
-
-            pre {
-
-                > code {
-
-                    font-size: 0.875rem;
-                
-                }
-
-            }
-            
-        }
-
-        @media screen and ( max-width: 55rem ) {
-
             blockquote {
 
                 margin: 2em 0;
@@ -267,6 +248,20 @@
 
             }
 
+        }
+
+        @media #{ $mqs } {
+
+            pre {
+
+                > code {
+
+                    font-size: 0.875rem;
+                
+                }
+
+            }
+            
         }
 
     }
