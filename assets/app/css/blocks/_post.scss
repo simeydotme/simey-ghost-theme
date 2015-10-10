@@ -156,6 +156,8 @@
             font-family: $fSerif;
             font-size: 1rem;
             text-align: center;
+            font-style: italic;
+            color: darken( $postbody , 10% );
 
             img {
 
