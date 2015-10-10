@@ -8,6 +8,7 @@
     var $document = $(document),
         $body = $("body");
 
+
     $.fn.titleLinks = function() {
 
         return $(this).each(function(k, v) {
@@ -69,6 +70,25 @@
     };
 
 
+    $.fn.centerImages = function() {
+
+        return $(this).each(function() {
+
+            var $this = $(this);
+
+            if ( $this.is("img") ) {
+
+                $this
+                    .parent("p")
+                    .addClass("txt-c");
+
+            }
+
+        });
+
+    };
+
+
 
     $document.ready(function() {
 
@@ -79,6 +99,7 @@
             $titles = $post.find("h1,h2,h3,h4,h5"),
             $codes = $post.find("pre"),
             $hrs = $post.find("hr"),
+            $imgs = $post.find("img"),
 
             guy, 
             toggle = true;
@@ -87,6 +108,7 @@
         $titles.titleLinks();
         $codes.addClass("prettyprint");
         $hrs.horizontalRules();
+        $imgs.centerImages();
 
 
 
