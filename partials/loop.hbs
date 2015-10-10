@@ -12,9 +12,9 @@
 
         <h3 class="loop-post__title // heading / txt-thin / mar0">
 
-            <a class="loop-post__title-link" href="{{url}}" tabindex="2" {{#if featured}} title="Featured Post!" {{/if}}>
+            <a class="loop-post__title-link" href="{{url}}" tabindex="2" title="{{excerpt words="10"}}...">
 
-                {{{title}}}
+                {{title}}
 
                 {{#if featured}}
                     <em class="hidden">this is a featured Article.</em>

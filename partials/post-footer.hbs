@@ -1,7 +1,7 @@
 
 <footer class="blog-post__footer // clear / sm-txt-c / mar-t5">
 
-    <section class="blog-post__meta // txt-code / mar-v3">
+    <section class="blog-post__meta // txt-code">
 
         <span class="blog-post__tags // txt-lower ">
             {{tags prefix="Posted in: " separator=", " suffix=""}}
@@ -9,24 +9,27 @@
 
     </section>
 
-{{! Everything inside the #author tags pulls data from the author }}
-{{#author}}
 
-    {{#if bio}}
+
+    {{! Everything inside the #author tags pulls data from the author }}
+
+    {{#author}}
+
+        {{#if bio}}
+            
+        {{else}}
+            
+        {{/if}}
+
+        {{#if image}}
         
-    {{else}}
-        
-    {{/if}}
+        {{/if}}
 
-    {{#if image}}
-    
-    {{/if}}
-
-{{/author}}
+    {{/author}}
 
 
 
-    <section class="share // txt+2 / txt-black ">
+    <section class="share // txt-black / mar-t1">
 
         <a 
             class="share__twitter // clr-blue"
