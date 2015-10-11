@@ -45,7 +45,7 @@
         }, opts, html;
 
         opts = $.extend( defaults, settings );
-        html = $("<div class=\"hr\" />");
+        html = "<div class=\"hr\" role=\"presentation\"></div>";
 
         return $(this).each(function() {
 
