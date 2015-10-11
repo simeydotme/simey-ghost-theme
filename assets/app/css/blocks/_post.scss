@@ -94,15 +94,14 @@
 
         code {
             
-            $c: $postpre;
-            $b: rgba( $prebg , 0.7 );
+            $c: $postcode;
+            $b: rgba( $prebg , 0.8 );
 
             color: $c;
             background: $b;
-            box-shadow: 0 0 0 1px rgba( $c, 0.1 );
 
             font-size: 0.75em;
-            padding: 0.1em 0.3em 0.15em;
+            padding: 0.2em 0.3em 0.25em;
             border-radius: 3px;
 
         }
@@ -120,7 +119,6 @@
                 padding: 1.5em 0;
                 display: block;
                 overflow-x: auto;
-                box-shadow: none;
 
             }
 
@@ -187,10 +185,7 @@
 
         mark {
             
-            background: #b2cdff;
-            color: $bgBody;
-            padding: 0 0.6em 0.2em;
-            border-radius: 16px;
+            @extend .mark;
 
         }
 

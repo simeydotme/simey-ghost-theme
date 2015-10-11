@@ -79,8 +79,7 @@
 
             &.function,
             &.class-name,
-            &.property,
-            &.attr-name {
+            &.property {
 
                 color: $blue;
 
@@ -91,7 +90,8 @@
             &.hexcode,
             &.regex,
             &.constant,
-            &.url {
+            &.url,
+            &.attr-name {
 
                 color: $purple;
 
