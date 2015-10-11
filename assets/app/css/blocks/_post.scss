@@ -159,7 +159,7 @@
             font-style: italic;
             color: darken( $postbody , 15% );
 
-            img {
+            &.no-shadow img {
 
                 box-shadow: none;
 
