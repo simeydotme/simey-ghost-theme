@@ -57,7 +57,8 @@
             }
 
             &.keyword,
-            &.selector {
+            &.selector,
+            &.tag {
 
                 color: $green;
 
@@ -69,7 +70,8 @@
 
             }
 
-            &.string {
+            &.string,
+            &.attr-value {
                 
                 color: $yellow;
 
@@ -77,7 +79,8 @@
 
             &.function,
             &.class-name,
-            &.property {
+            &.property,
+            &.attr-name {
 
                 color: $blue;
 
