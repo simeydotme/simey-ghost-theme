@@ -20,18 +20,18 @@
 
         color: $postbody;
 
-        > p:first-child {
-            
-            font-size: 1.25em;
+        p {
+
+            margin: 1.4em auto;
 
         }
 
         h1, h2, h3, h4, h5 {
             
+            @extend .txt-black;
             font-family: $fHeading;
             position: relative;
             color: $posttitle;
-            font-weight: 500;
             margin: 1em 0;
 
             svg {
@@ -155,7 +155,7 @@
             font-size: 1rem;
             text-align: center;
             font-style: italic;
-            color: darken( $postbody , 15% );
+            color: darken( $postbody , 10% );
 
             &.no-shadow img {
 
