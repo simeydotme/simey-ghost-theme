@@ -18,7 +18,7 @@
     $loophover: $simeycolor;
     $star: #fbff60;
     
-    $postbody: #e1e4ef;
+    $postbody: #d0d4e1;
     $posttitle: lighten( $postbody, 7% );
     $posthover: $simeycolor;
     $postvisited: $posttitle;
@@ -27,9 +27,9 @@
 
     $precolor: #c1c6d4;
     $prebg: $bg;
-    $postemphasis: #e5fbff;
+    $postemphasis: lighten( $postbody, 7% );
     
-    $fSans:     "Segoe UI", "Helvetica Neue", "Source Sans Pro", Arial, sans-serif;
+    $fSans:     "Open Sans", Arial, sans-serif;
     $fSerif:    "Merriweather", "Georgia", serif;
     $fHeading:  Avenir, $fSans;
     $fSimey:    Asap, $fSans;

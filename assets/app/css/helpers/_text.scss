@@ -1,68 +1,4 @@
 
-    // Helper Classes.
-
-    .wrap { 
-
-        max-width: 45rem; 
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-
-        @media screen and ( min-width: 80rem ) {
-
-            margin-left: 16rem;
-
-        }
-
-    }
-    
-    .clear {
-        
-        display: block;
-
-        &:after {
-
-            content: "";
-            display: table;
-            clear: both;
-            
-        }
-
-    }
-
-    .no-list {
-
-        list-style: none;
-
-    }
-
-    .heading {
-
-        font-family: $fHeading;
-        font-size: 2rem;
-        line-height: 1.4;
-        font-weight: 500;
-
-    }
-
-
-
-
-
-    @mixin hidden {
-
-        position: absolute; 
-        width: 1px; 
-        height: 1px; 
-        overflow: hidden; 
-        opacity: 0; 
-        top: 0;
-        left: 0;
-
-    }
-
-    .hidden             { @include hidden; }
 
     .txt\+5             { font-size: 5rem; }
     .txt\+4             { font-size: 3rem; }
@@ -97,43 +33,9 @@
     .txt-black          { font-weight: 700; }
     .txt-ultra          { font-weight: 900; }
 
-    .clr-default        { color: $fg; }
-    .clr-simey          { color: $simeycolor; }
-    .clr-blue           { color: $blue; }
-    .clr-coral          { color: $coral; }
-
-    .float-l            { float: left; }
-    .float-r            { float: right; }
-
-    .disp-b             { display: block; }
-    .disp-i             { display: inline; }
-    .disp-ib            { display: inline-block; }
-    .disp-n             { display: none; }
-
-    .thirty             { width: 30%; }
-    .forty              { width: 40%; }
-    .fifty              { width: 50%; }
-    .sixty              { width: 60%; }
-    .seventy            { width: 70%; }
-
-    .one-third          { width: 33%; }
-    .two-thirds         { width: 66%; }
-
-    .bg-dark            { background-color: $bgBody; }
-    .bg-darker          { background-color: $bg; }
-    .bg-simey           { background-color: $simeycolor; }
-    
-    .cursor-normal      { cursor: default; }
-    .cursor-hand        { cursor: pointer; }
-
-    .back-cover         { background-size: cover; }
-    .back-center        { background-position: center; }
-
 
 
 @media #{ $mql } {
-
-    .lg-hidden          { @include hidden; }
 
     .lg-txt\+5          { font-size: 5rem; }
     .lg-txt\+4          { font-size: 3rem; }
@@ -161,30 +63,11 @@
     .lg-txt-black       { font-weight: 700; }
     .lg-txt-ultra       { font-weight: 900; }
 
-    .lg-float-l         { float: left; }
-    .lg-float-r         { float: right; }
-
-    .lg-disp-b          { display: block; }
-    .lg-disp-i          { display: inline; }
-    .lg-disp-ib         { display: inline-block; }
-    .lg-disp-n          { display: none; }
-
-    .lg-thirty          { width: 30%; }
-    .lg-forty           { width: 40%; }
-    .lg-fifty           { width: 50%; }
-    .lg-sixty           { width: 60%; }
-    .lg-seventy         { width: 70%; }
-
-    .lg-one-third       { width: 33%; }
-    .lg-two-thirds      { width: 66%; }
-
 }
 
 
 
 @media #{ $mqs } {
-
-    .sm-hidden          { @include hidden; }
 
     .sm-txt\+5          { font-size: 5rem; }
     .sm-txt\+4          { font-size: 3rem; }
@@ -211,22 +94,5 @@
     .sm-txt-bold        { font-weight: 600; }
     .sm-txt-black       { font-weight: 700; }
     .sm-txt-ultra       { font-weight: 900; }
-
-    .sm-float-l         { float: left; }
-    .sm-float-r         { float: right; }
-
-    .sm-disp-b          { display: block; }
-    .sm-disp-i          { display: inline; }
-    .sm-disp-ib         { display: inline-block; }
-    .sm-disp-n          { display: none; }
-
-    .sm-thirty          { width: 30%; }
-    .sm-forty           { width: 40%; }
-    .sm-fifty           { width: 50%; }
-    .sm-sixty           { width: 60%; }
-    .sm-seventy         { width: 70%; }
-
-    .sm-one-third       { width: 33%; }
-    .sm-two-thirds      { width: 66%; }
 
 }
