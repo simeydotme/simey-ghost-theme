@@ -1,24 +1,31 @@
 
 
-    .flow-h             { overflow: hidden; }
-    .flow-v             { overflow: visible; }
-    .flow-s             { overflow: scroll; }
-    .flow-a             { overflow: auto; }
+    // OVERFLOW
+
+@mixin overflow( $prefix: "" ) {
+
+    .#{ $prefix }flow-h             { overflow: hidden; }
+    .#{ $prefix }flow-v             { overflow: visible; }
+    .#{ $prefix }flow-s             { overflow: scroll; }
+    .#{ $prefix }flow-a             { overflow: auto; }
+
+}
+
+
+
+// ====================================================================================
+
+
+    @include overflow();
 
 @media #{ $mql } {
 
-    .lg-flow-h          { overflow: hidden; }
-    .lg-flow-v          { overflow: visible; }
-    .lg-flow-s          { overflow: scroll; }
-    .lg-flow-a          { overflow: auto; }
+    @include overflow( "lg-" );
 
 }
 
 @media #{ $mqs } {
 
-    .sm-flow-h          { overflow: hidden; }
-    .sm-flow-v          { overflow: visible; }
-    .sm-flow-s          { overflow: scroll; }
-    .sm-flow-a          { overflow: auto; }
+    @include overflow( "sm-" );
 
 }

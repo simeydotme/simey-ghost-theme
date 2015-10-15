@@ -29,11 +29,12 @@
     $prebg: $bg;
     $postemphasis: lighten( $postbody, 7% );
     
-    $fSans:     "Open Sans", Arial, sans-serif;
-    $fSerif:    "Merriweather", "Georgia", serif;
-    $fHeading:  Avenir, $fSans;
-    $fSimey:    Asap, $fSans;
-    $fCode:     Menlo, Monaco, Consolas, monospace;
+    $fSans:         Lato, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    $fSerif:        "Merriweather", "Georgia", serif;
+    $fLatoHeading:  Avenir, $fSans;
+    $fOpenHeading:  Avenir, "Open Sans", $fSans;
+    $fSimey:        Asap, $fSans;
+    $fCode:         Menlo, Monaco, Consolas, monospace;
 
     // ========================================================================================
     
@@ -43,7 +44,10 @@
 
     // ========================================================================================
     
-    $wrap: 46em;
+    $wrap: 45rem;
+    $wrap-pad: 1.5rem;
+    $wrap-pad-small: .75rem;
+
     $mqs: "screen and ( max-width: 46rem )";
     $mqm: "screen and ( min-width: 36rem )";
     $mql: "screen and ( min-width: 46.00001rem )";

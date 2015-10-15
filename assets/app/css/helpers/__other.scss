@@ -1,13 +1,23 @@
 
+
     // Helper Classes.
 
     .wrap { 
 
-        max-width: 45rem; 
+        max-width: $wrap;
+
+        padding-left: $wrap-pad-small;
+        padding-right: $wrap-pad-small;
+
         margin-left: auto;
         margin-right: auto;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+
+        @media screen and ( min-width: 30rem ) {
+
+            padding-left: $wrap-pad;
+            padding-right: $wrap-pad;
+
+        }
 
         @media screen and ( min-width: 80rem ) {
 
@@ -37,20 +47,25 @@
 
     }
 
-    .heading {
-
-        font-family: $fHeading;
-        font-size: 2rem;
-        line-height: 1.4;
-        font-weight: 500;
-
-    }
 
 
 
+    .clr-default        { color: $fg; }
+    .clr-simey          { color: $simeycolor; }
+    .clr-blue           { color: $blue; }
+    .clr-coral          { color: $coral; }
+
+    .bg-dark            { background-color: $bgBody; }
+    .bg-darker          { background-color: $bg; }
+    .bg-simey           { background-color: $simeycolor; }
+    
+    .cursor-normal      { cursor: default; }
+    .cursor-hand        { cursor: pointer; }
 
 
-    @mixin hidden {
+@mixin helpers( $prefix: "" ) {
+
+    .#{ $prefix }hidden {
 
         position: absolute; 
         width: 1px; 
@@ -62,86 +77,43 @@
 
     }
 
-    .hidden             { @include hidden; }
+    .#{ $prefix }float-l            { float: left; }
+    .#{ $prefix }float-r            { float: right; }
 
-    .clr-default        { color: $fg; }
-    .clr-simey          { color: $simeycolor; }
-    .clr-blue           { color: $blue; }
-    .clr-coral          { color: $coral; }
+    .#{ $prefix }disp-b             { display: block; }
+    .#{ $prefix }disp-i             { display: inline; }
+    .#{ $prefix }disp-ib            { display: inline-block; }
+    .#{ $prefix }disp-n             { display: none; }
 
-    .float-l            { float: left; }
-    .float-r            { float: right; }
+    .#{ $prefix }thirty             { width: 30%; }
+    .#{ $prefix }forty              { width: 40%; }
+    .#{ $prefix }fifty              { width: 50%; }
+    .#{ $prefix }sixty              { width: 60%; }
+    .#{ $prefix }seventy            { width: 70%; }
 
-    .disp-b             { display: block; }
-    .disp-i             { display: inline; }
-    .disp-ib            { display: inline-block; }
-    .disp-n             { display: none; }
+    .#{ $prefix }one-third          { width: 33%; }
+    .#{ $prefix }two-thirds         { width: 66%; }
 
-    .thirty             { width: 30%; }
-    .forty              { width: 40%; }
-    .fifty              { width: 50%; }
-    .sixty              { width: 60%; }
-    .seventy            { width: 70%; }
-
-    .one-third          { width: 33%; }
-    .two-thirds         { width: 66%; }
-
-    .bg-dark            { background-color: $bgBody; }
-    .bg-darker          { background-color: $bg; }
-    .bg-simey           { background-color: $simeycolor; }
-    
-    .cursor-normal      { cursor: default; }
-    .cursor-hand        { cursor: pointer; }
-
-    .back-cover         { background-size: cover; }
-    .back-center        { background-position: center; }
-
-
-
-@media #{ $mql } {
-
-    .lg-hidden          { @include hidden; }
-
-    .lg-float-l         { float: left; }
-    .lg-float-r         { float: right; }
-
-    .lg-disp-b          { display: block; }
-    .lg-disp-i          { display: inline; }
-    .lg-disp-ib         { display: inline-block; }
-    .lg-disp-n          { display: none; }
-
-    .lg-thirty          { width: 30%; }
-    .lg-forty           { width: 40%; }
-    .lg-fifty           { width: 50%; }
-    .lg-sixty           { width: 60%; }
-    .lg-seventy         { width: 70%; }
-
-    .lg-one-third       { width: 33%; }
-    .lg-two-thirds      { width: 66%; }
+    .#{ $prefix }back-cover         { background-size: cover; }
+    .#{ $prefix }back-center        { background-position: center; }
 
 }
 
 
 
+// ====================================================================================
+
+
+    @include helpers();
+
+@media #{ $mql } {
+
+    @include helpers( "lg-" );
+
+}
+
 @media #{ $mqs } {
 
-    .sm-hidden          { @include hidden; }
-
-    .sm-float-l         { float: left; }
-    .sm-float-r         { float: right; }
-
-    .sm-disp-b          { display: block; }
-    .sm-disp-i          { display: inline; }
-    .sm-disp-ib         { display: inline-block; }
-    .sm-disp-n          { display: none; }
-
-    .sm-thirty          { width: 30%; }
-    .sm-forty           { width: 40%; }
-    .sm-fifty           { width: 50%; }
-    .sm-sixty           { width: 60%; }
-    .sm-seventy         { width: 70%; }
-
-    .sm-one-third       { width: 33%; }
-    .sm-two-thirds      { width: 66%; }
+    @include helpers( "sm-" );
 
 }

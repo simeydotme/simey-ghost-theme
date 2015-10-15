@@ -1,11 +1,16 @@
 
 
-    .txt-sans     { font-family: $fSans; }
-    .txt-serif    { font-family: $fSerif; }
-    .txt-code     { font-family: $fCode; }
+    // TEXT
 
-    .txt-lower    { text-transform: lowercase; }
-    .txt-upper    { text-transform: uppercase; }
+    .txt-sans       { font-family: $fSans; }
+    .txt-serif      { font-family: $fSerif; }
+    .txt-code       { font-family: $fCode; }
+
+    .txt-h-lato     { font-family: $fLatoHeading; }
+    .txt-h-open     { font-family: $fOpenHeading; }
+
+    .txt-lower      { text-transform: lowercase; }
+    .txt-upper      { text-transform: uppercase; }
 
     
 @mixin text( $prefix: "" ) {
@@ -38,10 +43,10 @@
 
 }
 
+// ====================================================================================
 
 
     @include text();
-
 
 
 @media #{ $mql } {
@@ -49,7 +54,6 @@
     @include text( "lg-" );
 
 }
-
 
 
 @media #{ $mqs } {
