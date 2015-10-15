@@ -1,125 +1,63 @@
     
     // MARGIN
 
-    .mar0           { margin: 0; }
-    .mar-t0         { margin-top: 0; }
-    .mar-b0         { margin-bottom: 0; }
-    .mar-l0         { margin-left: 0; }
-    .mar-r0         { margin-right: 0; }
-    .mar-h0         { margin-left: 0; margin-right: 0; }
-    .mar-v0         { margin-top: 0; margin-bottom: 0; }
+@mixin margin( $prefix: "" ) {
 
-    .mar1           { margin: 0.5rem; }
-    .mar-t1         { margin-top: 0.5rem; }
-    .mar-b1         { margin-bottom: 0.5rem; }
-    .mar-l1         { margin-left: 0.5rem; }
-    .mar-r1         { margin-right: 0.5rem; }
-    .mar-h1         { margin-left: 0.5rem; margin-right: 0.5rem; }
-    .mar-v1         { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+    .#{ $prefix }mar0           { margin: 0; }
+    .#{ $prefix }mar-t0         { margin-top: 0; }
+    .#{ $prefix }mar-b0         { margin-bottom: 0; }
+    .#{ $prefix }mar-l0         { margin-left: 0; }
+    .#{ $prefix }mar-r0         { margin-right: 0; }
+    .#{ $prefix }mar-h0         { margin-left: 0; margin-right: 0; }
+    .#{ $prefix }mar-v0         { margin-top: 0; margin-bottom: 0; }
 
-    .mar2           { margin: 1rem; }
-    .mar-t2         { margin-top: 1rem; }
-    .mar-b2         { margin-bottom: 1rem; }
-    .mar-l2         { margin-left: 1rem; }
-    .mar-r2         { margin-right: 1rem; }
-    .mar-h2         { margin-left: 1rem; margin-right: 1rem; }
-    .mar-v2         { margin-top: 1rem; margin-bottom: 1rem; }
+    .#{ $prefix }mar1           { margin: 0.5rem; }
+    .#{ $prefix }mar-t1         { margin-top: 0.5rem; }
+    .#{ $prefix }mar-b1         { margin-bottom: 0.5rem; }
+    .#{ $prefix }mar-l1         { margin-left: 0.5rem; }
+    .#{ $prefix }mar-r1         { margin-right: 0.5rem; }
+    .#{ $prefix }mar-h1         { margin-left: 0.5rem; margin-right: 0.5rem; }
+    .#{ $prefix }mar-v1         { margin-top: 0.5rem; margin-bottom: 0.5rem; }
 
-    .mar3           { margin: 2rem; }
-    .mar-t3         { margin-top: 2rem; }
-    .mar-b3         { margin-bottom: 2rem; }
-    .mar-l3         { margin-left: 2rem; }
-    .mar-r3         { margin-right: 2rem; }
-    .mar-h3         { margin-left: 2rem; margin-right: 2rem; }
-    .mar-v3         { margin-top: 2rem; margin-bottom: 2rem; }
+    .#{ $prefix }mar2           { margin: 1rem; }
+    .#{ $prefix }mar-t2         { margin-top: 1rem; }
+    .#{ $prefix }mar-b2         { margin-bottom: 1rem; }
+    .#{ $prefix }mar-l2         { margin-left: 1rem; }
+    .#{ $prefix }mar-r2         { margin-right: 1rem; }
+    .#{ $prefix }mar-h2         { margin-left: 1rem; margin-right: 1rem; }
+    .#{ $prefix }mar-v2         { margin-top: 1rem; margin-bottom: 1rem; }
 
-    .mar4           { margin: 4rem; }
-    .mar-t4         { margin-top: 4rem; }
-    .mar-b4         { margin-bottom: 4rem; }
-    .mar-l4         { margin-left: 4rem; }
-    .mar-r4         { margin-right: 4rem; }
-    .mar-h4         { margin-left: 4rem; margin-right: 4rem; }
-    .mar-v4         { margin-top: 4rem; margin-bottom: 4rem; }
+    .#{ $prefix }mar3           { margin: 2rem; }
+    .#{ $prefix }mar-t3         { margin-top: 2rem; }
+    .#{ $prefix }mar-b3         { margin-bottom: 2rem; }
+    .#{ $prefix }mar-l3         { margin-left: 2rem; }
+    .#{ $prefix }mar-r3         { margin-right: 2rem; }
+    .#{ $prefix }mar-h3         { margin-left: 2rem; margin-right: 2rem; }
+    .#{ $prefix }mar-v3         { margin-top: 2rem; margin-bottom: 2rem; }
 
-    .mar5           { margin: 8rem; }
-    .mar-t5         { margin-top: 8rem; }
-    .mar-b5         { margin-bottom: 8rem; }
-    .mar-l5         { margin-left: 8rem; }
-    .mar-r5         { margin-right: 8rem; }
-    .mar-h5         { margin-left: 8rem; margin-right: 8rem; }
-    .mar-v5         { margin-top: 8rem; margin-bottom: 8rem; }
+    .#{ $prefix }mar4           { margin: 4rem; }
+    .#{ $prefix }mar-t4         { margin-top: 4rem; }
+    .#{ $prefix }mar-b4         { margin-bottom: 4rem; }
+    .#{ $prefix }mar-l4         { margin-left: 4rem; }
+    .#{ $prefix }mar-r4         { margin-right: 4rem; }
+    .#{ $prefix }mar-h4         { margin-left: 4rem; margin-right: 4rem; }
+    .#{ $prefix }mar-v4         { margin-top: 4rem; margin-bottom: 4rem; }
 
-    .mar6           { margin: 16rem; }
-    .mar-t6         { margin-top: 16rem; }
-    .mar-b6         { margin-bottom: 16rem; }
-    .mar-l6         { margin-left: 16rem; }
-    .mar-r6         { margin-right: 16rem; }
-    .mar-h6         { margin-left: 16rem; margin-right: 16rem; }
-    .mar-v6         { margin-top: 16rem; margin-bottom: 16rem; }
+    .#{ $prefix }mar5           { margin: 8rem; }
+    .#{ $prefix }mar-t5         { margin-top: 8rem; }
+    .#{ $prefix }mar-b5         { margin-bottom: 8rem; }
+    .#{ $prefix }mar-l5         { margin-left: 8rem; }
+    .#{ $prefix }mar-r5         { margin-right: 8rem; }
+    .#{ $prefix }mar-h5         { margin-left: 8rem; margin-right: 8rem; }
+    .#{ $prefix }mar-v5         { margin-top: 8rem; margin-bottom: 8rem; }
 
-
-
-// ====================================================================================
-
-
-
-@media #{ $mql } {
-
-    .lg-mar0           { margin: 0; }
-    .lg-mar-t0         { margin-top: 0; }
-    .lg-mar-b0         { margin-bottom: 0; }
-    .lg-mar-l0         { margin-left: 0; }
-    .lg-mar-r0         { margin-right: 0; }
-    .lg-mar-h0         { margin-left: 0; margin-right: 0; }
-    .lg-mar-v0         { margin-top: 0; margin-bottom: 0; }
-
-    .lg-mar1           { margin: 0.5rem; }
-    .lg-mar-t1         { margin-top: 0.5rem; }
-    .lg-mar-b1         { margin-bottom: 0.5rem; }
-    .lg-mar-l1         { margin-left: 0.5rem; }
-    .lg-mar-r1         { margin-right: 0.5rem; }
-    .lg-mar-h1         { margin-left: 0.5rem; margin-right: 0.5rem; }
-    .lg-mar-v1         { margin-top: 0.5rem; margin-bottom: 0.5rem; }
-
-    .lg-mar2           { margin: 1rem; }
-    .lg-mar-t2         { margin-top: 1rem; }
-    .lg-mar-b2         { margin-bottom: 1rem; }
-    .lg-mar-l2         { margin-left: 1rem; }
-    .lg-mar-r2         { margin-right: 1rem; }
-    .lg-mar-h2         { margin-left: 1rem; margin-right: 1rem; }
-    .lg-mar-v2         { margin-top: 1rem; margin-bottom: 1rem; }
-
-    .lg-mar3           { margin: 2rem; }
-    .lg-mar-t3         { margin-top: 2rem; }
-    .lg-mar-b3         { margin-bottom: 2rem; }
-    .lg-mar-l3         { margin-left: 2rem; }
-    .lg-mar-r3         { margin-right: 2rem; }
-    .lg-mar-h3         { margin-left: 2rem; margin-right: 2rem; }
-    .lg-mar-v3         { margin-top: 2rem; margin-bottom: 2rem; }
-
-    .lg-mar4           { margin: 4rem; }
-    .lg-mar-t4         { margin-top: 4rem; }
-    .lg-mar-b4         { margin-bottom: 4rem; }
-    .lg-mar-l4         { margin-left: 4rem; }
-    .lg-mar-r4         { margin-right: 4rem; }
-    .lg-mar-h4         { margin-left: 4rem; margin-right: 4rem; }
-    .lg-mar-v4         { margin-top: 4rem; margin-bottom: 4rem; }
-
-    .lg-mar5           { margin: 8rem; }
-    .lg-mar-t5         { margin-top: 8rem; }
-    .lg-mar-b5         { margin-bottom: 8rem; }
-    .lg-mar-l5         { margin-left: 8rem; }
-    .lg-mar-r5         { margin-right: 8rem; }
-    .lg-mar-h5         { margin-left: 8rem; margin-right: 8rem; }
-    .lg-mar-v5         { margin-top: 8rem; margin-bottom: 8rem; }
-
-    .lg-mar6           { margin: 16rem; }
-    .lg-mar-t6         { margin-top: 16rem; }
-    .lg-mar-b6         { margin-bottom: 16rem; }
-    .lg-mar-l6         { margin-left: 16rem; }
-    .lg-mar-r6         { margin-right: 16rem; }
-    .lg-mar-h6         { margin-left: 16rem; margin-right: 16rem; }
-    .lg-mar-v6         { margin-top: 16rem; margin-bottom: 16rem; }
+    .#{ $prefix }mar6           { margin: 16rem; }
+    .#{ $prefix }mar-t6         { margin-top: 16rem; }
+    .#{ $prefix }mar-b6         { margin-bottom: 16rem; }
+    .#{ $prefix }mar-l6         { margin-left: 16rem; }
+    .#{ $prefix }mar-r6         { margin-right: 16rem; }
+    .#{ $prefix }mar-h6         { margin-left: 16rem; margin-right: 16rem; }
+    .#{ $prefix }mar-v6         { margin-top: 16rem; margin-bottom: 16rem; }
 
 }
 
@@ -128,63 +66,16 @@
 // ====================================================================================
 
 
+    @include margin();
+
+@media #{ $mql } {
+
+    @include margin( "lg-" );
+
+}
 
 @media #{ $mqs } {
 
-    .sm-mar0           { margin: 0; }
-    .sm-mar-t0         { margin-top: 0; }
-    .sm-mar-b0         { margin-bottom: 0; }
-    .sm-mar-l0         { margin-left: 0; }
-    .sm-mar-r0         { margin-right: 0; }
-    .sm-mar-h0         { margin-left: 0; margin-right: 0; }
-    .sm-mar-v0         { margin-top: 0; margin-bottom: 0; }
-
-    .sm-mar1           { margin: 0.5rem; }
-    .sm-mar-t1         { margin-top: 0.5rem; }
-    .sm-mar-b1         { margin-bottom: 0.5rem; }
-    .sm-mar-l1         { margin-left: 0.5rem; }
-    .sm-mar-r1         { margin-right: 0.5rem; }
-    .sm-mar-h1         { margin-left: 0.5rem; margin-right: 0.5rem; }
-    .sm-mar-v1         { margin-top: 0.5rem; margin-bottom: 0.5rem; }
-
-    .sm-mar2           { margin: 1rem; }
-    .sm-mar-t2         { margin-top: 1rem; }
-    .sm-mar-b2         { margin-bottom: 1rem; }
-    .sm-mar-l2         { margin-left: 1rem; }
-    .sm-mar-r2         { margin-right: 1rem; }
-    .sm-mar-h2         { margin-left: 1rem; margin-right: 1rem; }
-    .sm-mar-v2         { margin-top: 1rem; margin-bottom: 1rem; }
-
-    .sm-mar3           { margin: 2rem; }
-    .sm-mar-t3         { margin-top: 2rem; }
-    .sm-mar-b3         { margin-bottom: 2rem; }
-    .sm-mar-l3         { margin-left: 2rem; }
-    .sm-mar-r3         { margin-right: 2rem; }
-    .sm-mar-h3         { margin-left: 2rem; margin-right: 2rem; }
-    .sm-mar-v3         { margin-top: 2rem; margin-bottom: 2rem; }
-
-    .sm-mar4           { margin: 4rem; }
-    .sm-mar-t4         { margin-top: 4rem; }
-    .sm-mar-b4         { margin-bottom: 4rem; }
-    .sm-mar-l4         { margin-left: 4rem; }
-    .sm-mar-r4         { margin-right: 4rem; }
-    .sm-mar-h4         { margin-left: 4rem; margin-right: 4rem; }
-    .sm-mar-v4         { margin-top: 4rem; margin-bottom: 4rem; }
-
-    .sm-mar5           { margin: 8rem; }
-    .sm-mar-t5         { margin-top: 8rem; }
-    .sm-mar-b5         { margin-bottom: 8rem; }
-    .sm-mar-l5         { margin-left: 8rem; }
-    .sm-mar-r5         { margin-right: 8rem; }
-    .sm-mar-h5         { margin-left: 8rem; margin-right: 8rem; }
-    .sm-mar-v5         { margin-top: 8rem; margin-bottom: 8rem; }
-
-    .sm-mar6           { margin: 16rem; }
-    .sm-mar-t6         { margin-top: 16rem; }
-    .sm-mar-b6         { margin-bottom: 16rem; }
-    .sm-mar-l6         { margin-left: 16rem; }
-    .sm-mar-r6         { margin-right: 16rem; }
-    .sm-mar-h6         { margin-left: 16rem; margin-right: 16rem; }
-    .sm-mar-v6         { margin-top: 16rem; margin-bottom: 16rem; }
+    @include margin( "sm-" );
 
 }

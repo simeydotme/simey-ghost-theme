@@ -1,67 +1,52 @@
 
 
-    .txt\+5             { font-size: 5rem; }
-    .txt\+4             { font-size: 3rem; }
-    .txt\+3             { font-size: 2rem; }
-    .txt\+2             { font-size: 1.5rem; }
-    .txt\+1             { font-size: 1.25rem; }
-    .txt                { font-size: inherit; }
-    .txt-1              { font-size: .875rem; }
-    .txt-2              { font-size: .75rem; }
+    .txt-sans     { font-family: $fSans; }
+    .txt-serif    { font-family: $fSerif; }
+    .txt-code     { font-family: $fCode; }
 
-    .lh\+2              { line-height: 2; }
-    .lh\+1              { line-height: 1.5; }
-    .lh                 { line-height: 1.25; }
-    .lh-1               { line-height: 1; }
+    .txt-lower    { text-transform: lowercase; }
+    .txt-upper    { text-transform: uppercase; }
 
-    .txt-sans           { font-family: $fSans; }
-    .txt-serif          { font-family: $fSerif; }
-    .txt-code           { font-family: $fCode; }
+    
+@mixin text( $prefix: "" ) {
 
-    .txt-l              { text-align: left; }
-    .txt-r              { text-align: right; }
-    .txt-c              { text-align: center; }
+    .#{ $prefix }txt\+5        { font-size: 5rem; }
+    .#{ $prefix }txt\+4        { font-size: 3rem; }
+    .#{ $prefix }txt\+3        { font-size: 2rem; }
+    .#{ $prefix }txt\+2        { font-size: 1.5rem; }
+    .#{ $prefix }txt\+1        { font-size: 1.25rem; }
+    .#{ $prefix }txt           { font-size: inherit; }
+    .#{ $prefix }txt-1         { font-size: .875rem; }
+    .#{ $prefix }txt-2         { font-size: .75rem; }
 
-    .txt-lower          { text-transform: lowercase; }
-    .txt-upper          { text-transform: uppercase; }
+    .#{ $prefix }lh\+2         { line-height: 2; }
+    .#{ $prefix }lh\+1         { line-height: 1.5; }
+    .#{ $prefix }lh            { line-height: 1.25; }
+    .#{ $prefix }lh-1          { line-height: 1; }
 
-    .txt-thin           { font-weight: 200; }
-    .txt-light          { font-weight: 300; }
-    .txt-book           { font-weight: 400; }
-    .txt-semi           { font-weight: 500; }
-    .txt-bold           { font-weight: 600; }
-    .txt-black          { font-weight: 700; }
-    .txt-ultra          { font-weight: 900; }
+    .#{ $prefix }txt-l         { text-align: left; }
+    .#{ $prefix }txt-r         { text-align: right; }
+    .#{ $prefix }txt-c         { text-align: center; }
+
+    .#{ $prefix }txt-thin      { font-weight: 200; }
+    .#{ $prefix }txt-light     { font-weight: 300; }
+    .#{ $prefix }txt-book      { font-weight: 400; }
+    .#{ $prefix }txt-semi      { font-weight: 500; }
+    .#{ $prefix }txt-bold      { font-weight: 600; }
+    .#{ $prefix }txt-black     { font-weight: 700; }
+    .#{ $prefix }txt-ultra     { font-weight: 900; }
+
+}
+
+
+
+    @include text();
 
 
 
 @media #{ $mql } {
 
-    .lg-txt\+5          { font-size: 5rem; }
-    .lg-txt\+4          { font-size: 3rem; }
-    .lg-txt\+3          { font-size: 2rem; }
-    .lg-txt\+2          { font-size: 1.5rem; }
-    .lg-txt\+1          { font-size: 1.25rem; }
-    .lg-txt             { font-size: inherit; }
-    .lg-txt-1           { font-size: .875rem; }
-    .lg-txt-2           { font-size: .75rem; }
-
-    .lg-lh\+2           { line-height: 2; }
-    .lg-lh\+1           { line-height: 1.5; }
-    .lg-lh              { line-height: 1.25; }
-    .lg-lh-1            { line-height: 1; }
-
-    .lg-txt-l           { text-align: left; }
-    .lg-txt-r           { text-align: right; }
-    .lg-txt-c           { text-align: center; }
-
-    .lg-txt-thin        { font-weight: 100; }
-    .lg-txt-light       { font-weight: 200; }
-    .lg-txt-book        { font-weight: 400; }
-    .lg-txt-semi        { font-weight: 500; }
-    .lg-txt-bold        { font-weight: 600; }
-    .lg-txt-black       { font-weight: 700; }
-    .lg-txt-ultra       { font-weight: 900; }
+    @include text( "lg-" );
 
 }
 
@@ -69,30 +54,6 @@
 
 @media #{ $mqs } {
 
-    .sm-txt\+5          { font-size: 5rem; }
-    .sm-txt\+4          { font-size: 3rem; }
-    .sm-txt\+3          { font-size: 2rem; }
-    .sm-txt\+2          { font-size: 1.5rem; }
-    .sm-txt\+1          { font-size: 1.25rem; }
-    .sm-txt             { font-size: inherit; }
-    .sm-txt-1           { font-size: .875rem; }
-    .sm-txt-2           { font-size: .75rem; }
-
-    .sm-lh\+2           { line-height: 2; }
-    .sm-lh\+1           { line-height: 1.5; }
-    .sm-lh              { line-height: 1.25; }
-    .sm-lh-1            { line-height: 1; }
-
-    .sm-txt-l           { text-align: left; }
-    .sm-txt-r           { text-align: right; }
-    .sm-txt-c           { text-align: center; }
-
-    .sm-txt-thin        { font-weight: 100; }
-    .sm-txt-light       { font-weight: 200; }
-    .sm-txt-book        { font-weight: 400; }
-    .sm-txt-semi        { font-weight: 500; }
-    .sm-txt-bold        { font-weight: 600; }
-    .sm-txt-black       { font-weight: 700; }
-    .sm-txt-ultra       { font-weight: 900; }
+    @include text( "sm-" );
 
 }
