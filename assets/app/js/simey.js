@@ -6,7 +6,8 @@
     "use strict";
 
     var $document = $(document),
-        $body = $("body");
+        $body = $("body"),
+        version = $("link[rel=\"shortcut icon\"]").attr("href").split("?")[1];
 
 
     $.fn.titleLinks = function() {
@@ -20,12 +21,16 @@
 
             icons.link = "<svg class=\"simicon-link\" role=\"presentation\">" +
                 "<use xmlns:xlink=\"http://www.w3.org/1999/xlink\" " +
-                "xlink:href=\"/assets/dist/img/svgdefs.svg#simicon-link\"> " +
+                "xlink:href=\"/assets/dist/img/svgdefs.svg" +
+                "?" + version +
+                "#simicon-link\"> " +
                 "</use></svg>";
 
             icons.arrow = "<svg class=\"simicon-arrow-right\" role=\"presentation\">" +
                 "<use xmlns:xlink=\"http://www.w3.org/1999/xlink\" " +
-                "xlink:href=\"/assets/dist/img/svgdefs.svg#simicon-arrow-right\"> " +
+                "xlink:href=\"/assets/dist/img/svgdefs.svg" +
+                "?" + version +
+                "#simicon-arrow-right\"> " +
                 "</use></svg>";
 
             link = "<a href=\"#" + $this.attr("id") + "\">" + content + "</a>";
