@@ -12,6 +12,12 @@
     .txt-lower      { text-transform: lowercase; }
     .txt-upper      { text-transform: uppercase; }
 
+    .txt-it         { font-style: italic; }
+    .txt-nit        { font-style: normal; }
+    .txt-st         { text-decoration: line-through; }
+    .txt-ul         { text-decoration: underline; }
+    .txt-ol         { text-decoration: overline; }
+
     
 @mixin text( $prefix: "" ) {
 
