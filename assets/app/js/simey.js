@@ -178,6 +178,9 @@
     if ( window.console && console.warn && console.info && console.error ) {
 
         window.doge = function() {
+
+            ga("send", "event", "doge", "wow amaze" );
+            
             console.log(
                 "%c░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" +
                 "░░░░░░░░░░░░░░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" +
