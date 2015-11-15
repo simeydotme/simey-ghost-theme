@@ -105,6 +105,7 @@
             $codes = $post.find("pre"),
             $hrs = $post.find("hr"),
             $imgs = $post.find("img"),
+            $socials = $(".social__item"),
 
             guy, 
             toggle = true;
@@ -116,6 +117,18 @@
         $imgs.centerImages();
 
 
+
+
+        // track the social links
+
+        $socials.children(".social__link")
+
+            .on("click mouseenter", function(e) {
+
+                var which = $(this).parent().attr("class").replace("social__item / ", "");
+                ga("send", "event", "social " + e.type , which );
+
+            });
 
 
 
