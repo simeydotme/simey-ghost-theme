@@ -62,11 +62,16 @@
 
                 }
 
-                svg.simicon-arrow-right {
-                    
-                    opacity: 1;
-                    transform: translateX(0);
+                svg {
+
                     margin-top: 0.25rem;
+
+                    &.simicon-arrow-right {
+                    
+                        opacity: 1;
+                        transform: translateX(0);
+
+                    }
 
                 }
 
