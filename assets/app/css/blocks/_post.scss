@@ -1,5 +1,6 @@
 
-    .blog-post {
+    .blog-post,
+    .blog-page {
 
         &__header {
 
@@ -16,7 +17,8 @@
     }
 
 
-    .blog-post__content {
+    .blog-post__content,
+    .blog-page__content {
 
         color: $postbody;
 
