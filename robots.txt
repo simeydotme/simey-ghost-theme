@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: http://simey.me/sitemap.xml
+Disallow: /ghost/
+Disallow: /resume-hidden/
