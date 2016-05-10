@@ -10,7 +10,7 @@
 
 
     pre[class*="language-"] {
-        
+
         color: #E6EFF7;
         background: $prebg;
 
@@ -31,9 +31,9 @@
 
     }
 
-    pre[class*="language-"]::selection, 
+    pre[class*="language-"]::selection,
     pre[class*="language-"] ::selection,
-    code[class*="language-"]::selection, 
+    code[class*="language-"]::selection,
     code[class*="language-"] ::selection {
 
 
@@ -43,7 +43,7 @@
 
 
     pre[class*="language-"] {
-        
+
         .token {
 
             &.comment,
@@ -72,7 +72,7 @@
 
             &.string,
             &.attr-value {
-                
+
                 color: $yellow;
 
             }
@@ -110,7 +110,7 @@
         &.language-scss {
 
             .token {
-                
+
                 &.keyword {
 
                     color: $red;

@@ -42,6 +42,7 @@ js = {
         "./bower_components/prism/components/prism-handlebars.js",
 
         "./bower_components/prism/components/prism-jsx.js",
+        "./bower_components/prism/components/prism-json.js",
 
         "./bower_components/prism/components/prism-css-extras.js",
         "./bower_components/prism/components/prism-scss.js",

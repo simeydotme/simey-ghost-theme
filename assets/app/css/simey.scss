@@ -17,18 +17,18 @@
     $loopvisited: darken( $looptitle, 6% );
     $loophover: $simeycolor;
     $star: #fbff60;
-    
+
     $postbody: #d0d4e1;
     $posttitle: lighten( $postbody, 7% );
     $posthover: $simeycolor;
     $postvisited: $posttitle;
-    
-    $postcode: $violet;
+
+    $postcode: #bfbff4;
 
     $precolor: #c1c6d4;
     $prebg: $bg;
     $postemphasis: lighten( $postbody, 7% );
-    
+
     $fSans:         Lato, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     $fSerif:        "Merriweather", "Georgia", serif;
     $fLatoHeading:  Avenir, $fSans;
@@ -37,15 +37,15 @@
     $fCode:         Menlo, Monaco, Consolas, monospace;
 
     // ========================================================================================
-    
+
     $cubicOut:  cubic-bezier(0.215, 0.61, 0.355, 1);
     $cubicIn:   cubic-bezier(0.55, 0.055, 0.675, 0.19);
     $cubicEase: cubic-bezier(0.645, 0.045, 0.355, 1);
 
     // ========================================================================================
-    
+
     $wrap: 45rem;
-    $wrap-pad: 1.5rem;
+    $wrap-pad: 1rem;
     $wrap-pad-small: .75rem;
 
     $mqs: "screen and ( max-width: 46rem )";
@@ -73,7 +73,7 @@
     @import "blocks/navigation";
     @import "blocks/author";
     @import "blocks/footer";
-    
+
     @import "blocks/posts";
     @import "blocks/post";
     @import "blocks/photos";

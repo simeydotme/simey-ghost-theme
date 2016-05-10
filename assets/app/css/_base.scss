@@ -1,6 +1,6 @@
-    
+
     // default element styles.
-    
+
     * {
 
         box-sizing: border-box;
@@ -14,9 +14,9 @@
 
     }
 
-    html, 
+    html,
     body {
-        
+
         color: $fg;
         background: $bg;
         min-height: 100%;
@@ -38,7 +38,7 @@
 
     }
 
-    code, 
+    code,
     pre {
 
         font-family: $fCode;
@@ -47,7 +47,7 @@
 
     mark,
     .mark {
-        
+
         background: $simeycolor;
         color: $bg;
         padding: 0 0.6em 0.2em;
@@ -56,7 +56,7 @@
     }
 
     figure {
-        
+
         font-family: $fSerif;
         margin: 0;
 
@@ -71,7 +71,7 @@
     }
 
     .img {
-        
+
         border-radius: 5px;
         box-shadow: 0 2px 2px $bg;
 
