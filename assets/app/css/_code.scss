@@ -141,7 +141,7 @@
 
             }
 
-            .token {
+            .token:not(.comment) {
 
                 color: $simeycolor;
 
