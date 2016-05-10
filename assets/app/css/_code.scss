@@ -133,4 +133,16 @@
 
         }
 
+        &.language-bash {
+
+            color: lighten( $simeycolor, 15% );
+
+            .token {
+
+                color: $simeycolor;
+
+            }
+
+        }
+
     }
