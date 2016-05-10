@@ -135,7 +135,11 @@
 
         &.language-bash {
 
-            color: lighten( $simeycolor, 15% );
+            code {
+
+                color: lighten( $simeycolor, 20% );
+
+            }
 
             .token {
 
